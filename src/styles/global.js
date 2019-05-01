@@ -34,18 +34,18 @@ export default createGlobalStyle`
   }
   
   ul {
-      padding: 0;
-      line-height: 1.45;
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.45;
   }
   
   ul li {
-      display: inline-block;
-      list-style-type: square;
+    display: inline-block;
   }
   
   ul li:after {
-      content: " — ";
-      opacity: .5;
+    content: "\\00a0—\\00a0";
+    opacity: .5;
   }
   
   ul li:last-child:after {
