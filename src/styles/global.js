@@ -33,22 +33,22 @@ export default createGlobalStyle`
     width: 100%;
   }
   
-  .ul {
+  ul {
       padding: 0;
       line-height: 1.45;
   }
   
-  .ul li {
+  ul li {
       display: inline-block;
       list-style-type: square;
   }
   
-  .ul li:after {
+  ul li:after {
       content: " — ";
       opacity: .5;
   }
   
-  .ul li:last-child:after {
+  ul li:last-child:after {
       content: "";
   }
   
