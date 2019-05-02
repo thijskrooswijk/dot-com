@@ -5,8 +5,18 @@ import SEO from "../components/seo"
 
 import Box from "../components/box"
 import Text from "../components/text"
-import Art from "../components/art"
+import Droplet from "../components/droplets"
+import Clock from "../components/clock"
 import Header from "../components/header"
+
+function Artwork() {
+  let setNumber = Math.floor(Math.random() * 2) + 1
+  if (setNumber === 1) {
+    return <Droplet/>
+  } else {
+    return <Clock/>
+  }
+}
 
 const IndexPage = () => (
   <Layout>
@@ -65,7 +75,7 @@ const IndexPage = () => (
           </Box>
         </Box>
       </Box>
-      <Art />
+      <Artwork />
     </Box>
   </Layout>
 )
