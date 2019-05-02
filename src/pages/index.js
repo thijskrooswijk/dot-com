@@ -8,13 +8,16 @@ import Text from "../components/text"
 import Droplet from "../components/droplets"
 import Clock from "../components/clock"
 import Header from "../components/header"
+import Blob from "../components/blob"
 
 function Artwork() {
-  let setNumber = Math.floor(Math.random() * 2) + 1
+  let setNumber = Math.floor(Math.random() * 3) + 1
   if (setNumber === 1) {
     return <Droplet/>
-  } else {
+  } else if (setNumber === 2) {
     return <Clock/>
+  } else {
+    return <Blob/>
   }
 }
 
@@ -75,7 +78,7 @@ const IndexPage = () => (
           </Box>
         </Box>
       </Box>
-      <Artwork />
+      <Artwork/>
     </Box>
   </Layout>
 )
