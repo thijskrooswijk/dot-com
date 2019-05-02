@@ -2,7 +2,7 @@ import React from "react"
 import Box from "./box"
 import Image from "./image"
 
-const Art = () => (
+const Clock = () => (
   <Box m={"auto"} width={[1, 1, 1 / 2]}>
     <Box
       width={[1, 3 / 4, 3 / 4, 1 / 2]}
@@ -36,4 +36,4 @@ const Art = () => (
   </Box>
 )
 
-export default Art
+export default Clock
