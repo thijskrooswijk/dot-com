@@ -30,7 +30,8 @@ function Header() {
       </Heading>
       <Heading is="h2" color={"silver"}>
         Full Stack developer. Coding with C++, Python, Javascript and HTML/CSS.
-        Working @<a href="https://www.naivi.nl/">Naivi</a> on the <a href="https://www.napframework.com/">NAP Framework</a>
+        Working @<a href="https://www.naivi.nl/">Naivi</a> on the{" "}
+        <a href="https://www.napframework.com/">NAP Framework</a>
       </Heading>
     </Box>
   )

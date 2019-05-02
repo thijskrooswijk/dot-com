@@ -10,15 +10,15 @@ const Droplets = () => (
       p={"50%"}
       style={{
         flexFlow: "row wrap",
-        position: "relative"
+        position: "relative",
       }}
     >
-      <Box id="r1" className="ring"/>
-      <Box id="r2" className="ring"/>
-      <Box id="r3" className="ring"/>
-      <Box id="r4" className="ring"/>
-      <Box id="r5" className="ring"/>
-      <Box id="r6" className="ring"/>
+      <Box id="r1" className="ring" />
+      <Box id="r2" className="ring" />
+      <Box id="r3" className="ring" />
+      <Box id="r4" className="ring" />
+      <Box id="r5" className="ring" />
+      <Box id="r6" className="ring" />
     </Box>
   </Box>
 )

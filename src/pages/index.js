@@ -13,11 +13,11 @@ import Blob from "../components/blob"
 function Artwork() {
   let setNumber = Math.floor(Math.random() * 3) + 1
   if (setNumber === 1) {
-    return <Droplet/>
+    return <Droplet />
   } else if (setNumber === 2) {
-    return <Clock/>
+    return <Clock />
   } else {
-    return <Blob/>
+    return <Blob />
   }
 }
 
@@ -78,7 +78,7 @@ const IndexPage = () => (
           </Box>
         </Box>
       </Box>
-      <Artwork/>
+      <Artwork />
     </Box>
   </Layout>
 )

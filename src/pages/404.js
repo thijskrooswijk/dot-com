@@ -19,7 +19,9 @@ const NotFoundPage = () => (
       }}
     >
       <Heading is={"h1"}>NOT FOUND</Heading>
-      <Text is={"p"}>You just hit a route that doesn&#39;t exist... the sadness.</Text>
+      <Text is={"p"}>
+        You just hit a route that doesn&#39;t exist... the sadness.
+      </Text>
       <Link to={"/"}>Please Try this Link</Link>
     </Box>
   </Layout>
