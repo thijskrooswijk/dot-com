@@ -21,6 +21,42 @@ function Artwork() {
   }
 }
 
+function ListItem(props) {
+  return <li>{props.value}</li>
+}
+
+function ClientList(props) {
+  const clients = props.clients
+  const listItems = clients.map(client => (
+    <ListItem key={client.toString()} value={client} />
+  ))
+  return (
+    <Text is={"ul"} color={"silver"}>
+      {listItems}
+    </Text>
+  )
+}
+
+const clients = [
+  "Booking.com",
+  "Nationale Nederlanden",
+  "Elsevier",
+  "Schiphol",
+  "KLM",
+  "United for Wildlife",
+  "CM.com",
+  "MCI",
+  "VGZ",
+  "Tilburg University",
+  "Hogeschool Utrecht",
+  "UWV",
+  "VVV",
+  "BUMA/Stemra",
+  "h19 Centrum voor de kunsten",
+  "Podium Bloos",
+  "De Ketelfactory",
+]
+
 const IndexPage = () => (
   <Layout>
     <SEO
@@ -47,25 +83,14 @@ const IndexPage = () => (
         >
           <Header />
           <Box is={"main"}>
-            <ul>
-              <li>Booking.com</li>
-              <li>Nationale Nederlanden</li>
-              <li>Elsevier</li>
-              <li>Schiphol</li>
-              <li>KLM</li>
-              <li>CM</li>
-              <li>VGZ</li>
-              <li>MCI</li>
-              <li>Tilburg University</li>
-              <li>Hogeschool Utrecht</li>
-              <li>UWV</li>
-              <li>VVV</li>
-              <li>BUMA/Stemra</li>
-              <li>Gimbrère Mode</li>
-              <li>h19 Centrum voor de kunsten</li>
-              <li>Podium Bloos</li>
-              <li>De Ketelfactory</li>
-            </ul>
+            <Text is={"p"} fontSize={[18]} lineHeight={1.45} mb={5}>
+              I empowering companies and teams to implement and execute new
+              technical solutions that support multi-channel services with speed
+              and efficiency. With 10 years of experience, I’ve helped clients
+              such as Elsevier, Schiphol, Novartis and NN, to iterate and grow
+              over time in an agile process.
+            </Text>
+            <ClientList clients={clients} />
             <Text is="p">
               <small>
                 Currently working in <b>Amsterdam</b>
