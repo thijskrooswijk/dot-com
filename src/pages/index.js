@@ -5,21 +5,8 @@ import SEO from "../components/seo"
 
 import Box from "../components/box"
 import Text from "../components/text"
-import Droplet from "../components/droplets"
 import Clock from "../components/clock"
 import Header from "../components/header"
-import Blob from "../components/blob"
-
-function Artwork() {
-  const setNumber = Math.floor(Math.random() * 3)
-  if (setNumber === 0) {
-    return <Droplet />
-  } else if (setNumber === 1) {
-    return <Clock />
-  } else {
-    return <Blob />
-  }
-}
 
 function ListItem(props) {
   return <li>{props.value}</li>
@@ -103,7 +90,7 @@ const IndexPage = () => (
           </Box>
         </Box>
       </Box>
-      <Artwork />
+      <Clock />
     </Box>
   </Layout>
 )
