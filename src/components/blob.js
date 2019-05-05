@@ -15,10 +15,10 @@ const Blob = () => (
       }}
     >
       <div className="blobs">
-        <div className="blob"> </div>
-        <div className="blob"> </div>
-        <div className="blob"> </div>
-        <div className="blob"> </div>
+        <div className="blob"/>
+        <div className="blob"/>
+        <div className="blob"/>
+        <div className="blob"/>
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1">

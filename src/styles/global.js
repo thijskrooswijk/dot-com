@@ -96,11 +96,11 @@ export default createGlobalStyle`
     100% {transform: scale(1); opacity: 0}
   }
   
-  #r2 {animation-delay: -1s}
-  #r3 {animation-delay: -2s}
-  #r4 {animation-delay: -3s}
-  #r5 {animation-delay: -4s}
-  #r6 {animation-delay: -5s}
+  .ring:nth-child(2) {animation-delay: -1s}
+  .ring:nth-child(3) {animation-delay: -2s}
+  .ring:nth-child(4) {animation-delay: -3s}
+  .ring:nth-child(5) {animation-delay: -4s}
+  .ring:nth-child(6) {animation-delay: -5s}
   
   .blobs {
     filter: url("#goo");

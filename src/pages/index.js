@@ -11,10 +11,10 @@ import Header from "../components/header"
 import Blob from "../components/blob"
 
 function Artwork() {
-  let setNumber = Math.floor(Math.random() * 3) + 1
-  if (setNumber === 1) {
+  const setNumber = Math.floor(Math.random() * 3)
+  if (setNumber === 0) {
     return <Droplet />
-  } else if (setNumber === 2) {
+  } else if (setNumber === 1) {
     return <Clock />
   } else {
     return <Blob />
