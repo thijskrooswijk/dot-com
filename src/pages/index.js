@@ -8,6 +8,9 @@ import Text from "../components/text"
 import Clock from "../components/clock"
 import Header from "../components/header"
 
+import IconGithub from "../components/iconGithub"
+import IconLinkedIn from "../components/iconLinkedIn"
+
 function ListItem(props) {
   return <li>{props.value}</li>
 }
@@ -84,8 +87,13 @@ const IndexPage = () => (
               </small>
             </Text>
             <Text is="p">
-              <a href="https://www.linkedin.com/in/thijskrooswijk/">LinkedIn</a>{" "}
-              / <a href="https://www.github.com/thijskrooswijk/">Github</a>
+              <a href="https://www.linkedin.com/in/thijskrooswijk/" style={{marginRight:8}}>
+                <IconLinkedIn />
+              </a>
+              {` `}
+              <a href="https://www.github.com/thijskrooswijk/">
+                <IconGithub />
+              </a>
             </Text>
           </Box>
         </Box>
