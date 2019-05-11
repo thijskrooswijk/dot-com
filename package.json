@@ -8,6 +8,7 @@
     "@rebass/components": "^4.0.0-1",
     "gatsby": "^2.3.34",
     "gatsby-image": "^2.0.41",
+    "gatsby-plugin-canonical-urls": "^2.0.12",
     "gatsby-plugin-google-tagmanager": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
