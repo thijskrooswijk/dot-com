@@ -8,12 +8,14 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.thijskrooswijk.com`,
     title: `Thijs Krooswijk`,
     description: `Full Stack developer. Coding with C++, Python, Javascript and HTML/CSS. Working at Naivi and NAP`,
     author: `@thijskrooswijk`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
