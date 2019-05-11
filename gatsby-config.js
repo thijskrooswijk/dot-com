@@ -1,3 +1,11 @@
+let activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Thijs Krooswijk`,
@@ -8,6 +16,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-svg-sprite`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,11 +34,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `thijs-krooswijk`,
+        short_name: `dotcom`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#222222`,
+        theme_color: `#222222`,
         display: `minimal-ui`,
         icon: `src/images/angular-right.png`, // This path is relative to the root of the site.
       },
