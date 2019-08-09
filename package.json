@@ -6,28 +6,29 @@
   "author": "Thijs Krooswijk <t.krooswijk@gmail.com>",
   "dependencies": {
     "@rebass/components": "^4.0.0-1",
-    "gatsby": "^2.3.34",
-    "gatsby-image": "^2.0.41",
-    "gatsby-plugin-canonical-urls": "^2.0.12",
-    "gatsby-plugin-google-tagmanager": "^2.0.13",
-    "gatsby-plugin-manifest": "^2.0.29",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.35",
-    "gatsby-plugin-sitemap": "^2.1.0",
-    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby": "^2.13.55",
+    "gatsby-image": "^2.2.8",
+    "gatsby-plugin-canonical-urls": "^2.1.2",
+    "gatsby-plugin-google-tagmanager": "^2.1.5",
+    "gatsby-plugin-manifest": "^2.2.5",
+    "gatsby-plugin-offline": "^2.2.5",
+    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-sharp": "^2.2.10",
+    "gatsby-plugin-sitemap": "^2.2.6",
+    "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-plugin-svg-sprite": "^2.0.1",
-    "gatsby-source-filesystem": "^2.0.33",
-    "gatsby-transformer-sharp": "^2.1.18",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-sharp": "^2.2.6",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^4.2.0",
-    "styled-system": "^4.1.0"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2",
+    "styled-system": "^4.2.4",
+    "ts-pnp": "^1.1.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
