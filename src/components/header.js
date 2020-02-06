@@ -29,7 +29,7 @@ function Header() {
         </Link>
       </Heading>
       <Heading is="h2" color={"silver"} lineHeight={1.25}>
-        Full Stack developer. Coding with C++, Python, Javascript and HTML/CSS.
+        Full Stack developer. Coding with Python, Javascript and HTML/CSS.
         Working @<a href="https://www.naivi.nl/">Naivi</a> on the{" "}
         <a href="https://www.napframework.com/">NAP Framework</a>
       </Heading>
