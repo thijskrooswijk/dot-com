@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.thijskrooswijk.com`,
     title: `Thijs Krooswijk`,
-    description: `Full Stack developer. Coding with Python, Javascript and HTML/CSS. Working at Naivi and NAP`,
+    description: `Full Stack developer. Coding with Python, Javascript and HTML/CSS. Working at Naivi on the NAP Framework.`,
     author: `@thijskrooswijk`,
   },
   plugins: [
