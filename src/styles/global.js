@@ -34,22 +34,7 @@ export default createGlobalStyle`
   }
   
   ul {
-    list-style-type: none;
-    padding: 0;
     line-height: 1.45;
-  }
-  
-  ul li {
-    display: inline-block;
-  }
-  
-  ul li:after {
-    content: "\\00a0—\\00a0";
-    opacity: .5;
-  }
-  
-  ul li:last-child:after {
-      content: "";
   }
   
   .right {
