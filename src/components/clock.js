@@ -8,8 +8,8 @@ const Clock = () => (
       width={[1, 3 / 4, 3 / 4, 1 / 2]}
       display={"flex"}
       m={"auto"}
-      p={6}
-      style={{
+      p={[6, 0]}
+      css={{
         flexFlow: "row wrap",
       }}
     >

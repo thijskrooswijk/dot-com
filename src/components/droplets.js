@@ -1,5 +1,6 @@
 import React from "react"
 import Box from "./box"
+import { dropletStyle } from "../styles/style"
 
 const Droplets = () => (
   <Box m={"auto"} width={[1, 1, 1 / 2]}>
@@ -8,17 +9,17 @@ const Droplets = () => (
       display={"flex"}
       m={"auto"}
       p={"50%"}
-      style={{
+      css={{
         flexFlow: "row wrap",
         position: "relative",
       }}
     >
-      <Box className="ring" />
-      <Box className="ring" />
-      <Box className="ring" />
-      <Box className="ring" />
-      <Box className="ring" />
-      <Box className="ring" />
+      <Box css={dropletStyle} />
+      <Box css={dropletStyle} />
+      <Box css={dropletStyle} />
+      <Box css={dropletStyle} />
+      <Box css={dropletStyle} />
+      <Box css={dropletStyle} />
     </Box>
   </Box>
 )

@@ -1,24 +1,24 @@
 import React from "react"
 import Box from "./box"
+import { blobsStyle, blobStyle } from "../styles/style"
 
 const Blob = () => (
   <Box m={"auto"} width={[1, 1, 1 / 2]}>
     <Box
-      width={[1, 3 / 4, 3 / 4, 1 / 2]}
+      width={1}
       display={"flex"}
       m={"auto"}
-      p={"20%"}
       bg={"#222"}
-      style={{
+      css={{
         flexFlow: "row wrap",
         position: "relative",
       }}
     >
-      <Box className="blobs">
-        <Box className="blob" />
-        <Box className="blob" />
-        <Box className="blob" />
-        <Box className="blob" />
+      <Box css={blobsStyle}>
+        <Box css={blobStyle} />
+        <Box css={blobStyle} />
+        <Box css={blobStyle} />
+        <Box css={blobStyle} />
       </Box>
 
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
