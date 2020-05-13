@@ -25,6 +25,12 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-svg-sprite`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: process.env.GOOGLE_TAGMANAGER_ID,
