@@ -15,6 +15,7 @@ const Box = system(
   "height",
   "color",
   "fontSize",
+  "maxWidth",
   // typography
   "fontFamily",
   "textAlign",

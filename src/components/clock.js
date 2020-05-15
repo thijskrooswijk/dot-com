@@ -3,12 +3,13 @@ import Box from "./box"
 import Image from "./image"
 
 const Clock = () => (
-  <Box m={"auto"} width={[1, 1, 1 / 2]}>
+  <Box m={"auto"} width={1}>
     <Box
-      width={[1, 3 / 4, 3 / 4, 1 / 2]}
+      width={1}
+      maxWidth={"35em"}
       display={"flex"}
       m={"auto"}
-      p={[6, 0]}
+      p={6}
       css={{
         flexFlow: "row wrap",
       }}

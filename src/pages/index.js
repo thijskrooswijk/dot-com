@@ -13,8 +13,6 @@ import { clients, social, work } from "../data/content"
 import { WorkList } from "../components/work"
 import { ClientList } from "../components/clients"
 import { SocialList } from "../components/social"
-import Droplets from "../components/droplets"
-const random_boolean = Math.random() >= 0.5
 
 const IndexPage = () => (
   <Layout>
@@ -31,7 +29,7 @@ const IndexPage = () => (
         maxWidth: "1600px",
       }}
     >
-      <Box m={"auto"} width={[1, 3 / 4, 3 / 4, 1 / 2]}>
+      <Box m={"auto"} width={1}>
         <Box
           display={"flex"}
           m={"auto"}
@@ -61,7 +59,7 @@ const IndexPage = () => (
           </Box>
         </Box>
       </Box>
-      {random_boolean === true ? <Clock /> : <Droplets />}
+      <Clock />
     </Box>
   </Layout>
 )
