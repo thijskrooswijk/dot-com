@@ -2,7 +2,7 @@
   "name": "dot-com",
   "private": true,
   "description": "Portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Thijs Krooswijk <t.krooswijk@gmail.com>",
   "dependencies": {
     "@rebass/components": "^4.0.0-1",

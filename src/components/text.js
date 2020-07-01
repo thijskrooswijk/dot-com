@@ -18,6 +18,7 @@ const Text = system(
   "textAlign",
   "lineHeight",
   "fontWeight",
+  "fontStyle",
   "letterSpacing"
 )
 

@@ -1,12 +1,12 @@
 import React from "react"
 import Text from "./text"
-import { workListItemStyle, workListStyle } from "../styles/style"
+import { linkStyle, workListItemStyle, workListStyle } from "../styles/style"
 
-const WorkListItem = props => {
+const WorkListItem = (props) => {
   const work = props.work
   return (
     <li css={workListItemStyle}>
-      <a href={work.url}>
+      <a href={work.url} css={linkStyle}>
         <span>{work.client}</span>
         {` `}
         {work.description}
@@ -15,13 +15,13 @@ const WorkListItem = props => {
   )
 }
 
-export const WorkList = props => {
+export const WorkList = (props) => {
   const work = props.work
   const listItems = work.map((work, index) => (
     <WorkListItem key={index} work={work} />
   ))
   return (
-    <Text is={"ul"} css={workListStyle}>
+    <Text is="ul" css={workListStyle}>
       {listItems}
     </Text>
   )

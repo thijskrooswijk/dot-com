@@ -13,18 +13,6 @@ export default createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    color: white;
-    background-color: #222;
-  }
-  
-  .box {
-    @media (max-width: 768px) {
-            flex-direction: column;
-        }
-    }
-  
-  a {
-      color: gray;
   }
   
   .gatsby-image-wrapper {

@@ -1,15 +1,19 @@
 import React from "react"
 import Text from "./text"
-import { socialListItemStyle, socialListStyle } from "../styles/style"
+import {
+  socialLinkStyle,
+  socialListItemStyle,
+  socialListStyle,
+} from "../styles/style"
 import IconLinkedIn from "./iconLinkedIn"
 import IconNpm from "./iconNpm"
 import IconGithub from "./iconGithub"
 
-const SocialListItem = props => {
+const SocialListItem = (props) => {
   const social = props.social
   return (
     <li css={socialListItemStyle}>
-      <a href={social.url} style={{ display: "inline-flex" }}>
+      <a href={social.url} css={socialLinkStyle}>
         {social.icon === "linkedin" && <IconLinkedIn />}
         {social.icon === "github" && <IconGithub />}
         {social.icon === "npm" && <IconNpm />}
@@ -19,7 +23,7 @@ const SocialListItem = props => {
   )
 }
 
-export const SocialList = props => {
+export const SocialList = (props) => {
   const social = props.social
   const listItems = social.map((social, index) => (
     <SocialListItem key={index} social={social} />

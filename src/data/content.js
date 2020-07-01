@@ -1,3 +1,11 @@
+export const heading = ["Latest work"]
+
+export const text = [
+  "I empowering companies and teams to implement and execute new technical solutions that support multi-channel services with speed and efficiency. With 12 years of experience, I’ve helped clients such as Elsevier, Schiphol, Novartis and NN, to iterate and grow over time in an agile process.",
+]
+
+export const current = ["Currently working in Amsterdam"]
+
 export const work = [
   {
     client: "Wheelroom (open-source)",

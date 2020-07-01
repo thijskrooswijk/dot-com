@@ -49,7 +49,7 @@ const Image = ({ image, rotation }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       let fileName
       if (image === "right") {
         fileName = data.right.childImageSharp.fluid

@@ -16,6 +16,8 @@ import Style from "../styles/global"
 
 const Root = styled.div`
   ${fontFamily}
+  color: white;
+  background-color: #222;
 `
 
 const Layout = ({ children }) => (
@@ -29,10 +31,10 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <ThemeProvider theme={theme}>
         <>
-          <Root fontFamily={"normal"}>
+          <Root fontFamily="normal">
             <Style />
             {children}
           </Root>

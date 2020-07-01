@@ -13,9 +13,12 @@ const Box = system(
   "space",
   "width",
   "height",
+  "minHeight",
   "color",
   "fontSize",
   "maxWidth",
+  "flexDirection",
+  "flexWrap",
   // typography
   "fontFamily",
   "textAlign",

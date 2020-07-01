@@ -7,7 +7,9 @@ const Theme = {
     xlarge: "1280px",
   },
   fonts: {
-    normal: ["system-ui", "sans-serif"],
+    normal: [
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    ],
   },
   fontWeights: {
     light: 300,

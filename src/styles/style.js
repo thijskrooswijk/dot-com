@@ -1,5 +1,9 @@
+export const linkStyle = `
+    color: gray;
+`
 export const workListStyle = `
   padding-left: 1.25em;
+  margin-bottom: 2em;
 `
 
 export const workListItemStyle = `
@@ -15,6 +19,7 @@ export const clientListStyle = `
   padding: 0;
   line-height: 1.45;
   color: silver;
+  margin-bottom: 2em;
 `
 
 export const clientListItemStyle = `
@@ -41,6 +46,10 @@ export const socialListItemStyle = `
   &:last-child {
     margin-right: 0;
   }
+`
+
+export const socialLinkStyle = `
+    display: inline-flex;
 `
 
 export const dropletStyle = `
