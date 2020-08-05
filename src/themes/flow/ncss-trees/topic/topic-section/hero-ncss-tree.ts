@@ -1,5 +1,5 @@
 import { TopicSectionNcssTree } from '@wheelroom/wheel-topic'
-import { DeepPartial } from '@wheelroom/core'
+import { DeepPartial, deepMerge } from '@wheelroom/core'
 import {
   primaryButtonNcssNode,
   displayButtonNcssNode,
@@ -7,24 +7,33 @@ import {
 } from '../../../element-ncss/button-ncss'
 import { iconButtonNcssNode, iconTopicNcssNode } from '../../icon-ncss'
 import { embedNcssNode } from '../../embed-ncss'
-import { containerNcssNode } from '../../grid-ncss'
+import { containerNcssNode, wrapperNcssNode } from '../../grid-ncss'
 
 export const topicSectionHeroNcssTree: DeepPartial<TopicSectionNcssTree> = {
-  container: containerNcssNode,
+  container: deepMerge([
+    containerNcssNode,
+    {
+      ncss: {
+        display: 'grid',
+        gridAutoColumns: '1fr',
+        columnGap: 3,
+        rowGap: 3,
+        gridTemplateColumns: ['1fr', '1fr 1fr 1fr'],
+        maxWidth: '1280px',
+        mx: 'auto',
+      },
+    },
+  ]),
   topic: {
     ncssSwitch: {
       container: {
-        position: 'relative',
-        w: 1,
+        gridArea: '1 / 1 / 2 / 3',
       },
     },
     content: {
       ncss: {
+        p: 5,
         maxWidth: '80em',
-        mx: 'auto',
-        px: [4, 5, 6],
-        py: [7, 8, 10, 12],
-        w: 1,
       },
     },
     actionGroup: {
@@ -43,11 +52,6 @@ export const topicSectionHeroNcssTree: DeepPartial<TopicSectionNcssTree> = {
         },
       },
       icon: iconButtonNcssNode,
-    },
-    text: {
-      ncss: {
-        maxWidth: '30em',
-      },
     },
     abstract: {
       ncss: {
@@ -86,5 +90,12 @@ export const topicSectionHeroNcssTree: DeepPartial<TopicSectionNcssTree> = {
       },
     },
   },
-  wrapper: {},
+  wrapper: deepMerge([
+    wrapperNcssNode,
+    {
+      ncss: {
+        py: 8,
+      },
+    },
+  ]),
 }

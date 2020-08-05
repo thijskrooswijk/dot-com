@@ -1,37 +1,50 @@
 import { TopicSectionNcssTree } from '@wheelroom/wheel-topic'
-import { DeepPartial } from '@wheelroom/core'
-import { iconTopicNcssNode } from '../../icon-ncss'
-import { embedNcssNode } from '../../embed-ncss'
-import { wrapperNcssNode } from '../../grid-ncss'
+import { DeepPartial, deepMerge } from '@wheelroom/core'
+import { wrapperNcssNode, containerNcssNode } from '../../grid-ncss'
 
 export const topicSectionGalleryNcssTree: DeepPartial<TopicSectionNcssTree> = {
-  container: {
-    ncss: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      alignItems: 'center',
+  container: deepMerge([
+    containerNcssNode,
+    {
+      ncss: {
+        display: 'grid',
+        alignContent: 'space-around',
+        gridAutoColumns: '1fr',
+        columnGap: 3,
+        rowGap: 3,
+        gridTemplateColumns: [
+          '1fr 1fr 1fr',
+          '1fr 1fr 1fr',
+          '1fr 1fr 1fr 1fr 1fr 1fr',
+        ],
+      },
     },
-  },
+  ]),
   topic: {
     ncssSwitch: {
       container: {
-        w: 1 / 2,
+        justifyContent: 'center',
+        py: [3, 3, 0],
       },
     },
-    content: {
+    media: {
       ncss: {
-        p: 3,
+        m: 'auto',
       },
     },
-    icon: iconTopicNcssNode,
-    embed: embedNcssNode,
     image: {
-      picture: {
-        ncss: {
-          p: 3,
-        },
+      ncss: {
+        maxHeight: '32px',
+        maxWidth: '108px',
       },
     },
   },
-  wrapper: wrapperNcssNode,
+  wrapper: deepMerge([
+    wrapperNcssNode,
+    {
+      ncss: {
+        py: 6,
+      },
+    },
+  ]),
 }

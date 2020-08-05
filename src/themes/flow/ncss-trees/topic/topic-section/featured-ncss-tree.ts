@@ -11,16 +11,14 @@ import { wrapperNcssNode } from '../../grid-ncss'
 
 export const topicSectionFeaturedNcssTree: DeepPartial<TopicSectionNcssTree> = {
   container: {
-    ncss: {
-      flexDirection: 'column',
-    },
+    ncss: {},
   },
   topic: {
     ncssSwitch: {
       container: {
-        flexDirection: ['column', 'column', 'row'],
-        justifyContent: 'space-evenly',
-        py: 3,
+        display: 'grid',
+        gridTemplateColumns: ['1fr', '1fr 1fr'],
+        gridGap: 3,
         alignItems: 'center',
       },
     },
@@ -28,7 +26,7 @@ export const topicSectionFeaturedNcssTree: DeepPartial<TopicSectionNcssTree> = {
       ncss: {
         flexDirection: 'column',
         p: 3,
-        maxWidth: ['35em', '35em', '45%'],
+        maxWidth: '35em',
         w: 1,
       },
     },
@@ -56,9 +54,6 @@ export const topicSectionFeaturedNcssTree: DeepPartial<TopicSectionNcssTree> = {
     icon: iconTopicNcssNode,
     media: {
       ncss: {
-        flexDirection: 'column',
-        p: 3,
-        maxWidth: ['35em', '35em', '45%'],
         w: 1,
       },
     },

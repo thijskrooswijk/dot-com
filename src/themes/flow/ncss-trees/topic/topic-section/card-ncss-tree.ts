@@ -2,13 +2,11 @@ import { TopicSectionNcssTree } from '@wheelroom/wheel-topic'
 import { deepMerge, DeepPartial } from '@wheelroom/core'
 import { containerNcssNode, wrapperNcssNode } from '../../grid-ncss'
 import { primaryButtonNcssNode } from '../../../element-ncss/button-ncss'
-import { iconTopicNcssNode } from '../../icon-ncss'
 import { embedNcssNode } from '../../embed-ncss'
 
 const containerNcss = {
   border: '1px solid transparent',
   borderColor: 'cardBorder',
-  borderRadius: 8,
   textDecoration: 'none',
   pt: 5,
 }
@@ -20,10 +18,10 @@ export const topicSectionCardNcssTree: DeepPartial<TopicSectionNcssTree> = {
       ncss: {
         display: 'grid',
         gridAutoColumns: '1fr',
-        gridColumnGap: '16px',
-        gridRowGap: '16px',
-        gridTemplateColumns: '1fr 1fr 1fr',
-        justifyContent: 'center',
+        columnGap: 3,
+        rowGap: 3,
+        gridTemplateColumns: ['1fr', '1fr 1fr', '1fr 1fr 1fr'],
+        maxWidth: ['30em', '1440px'],
       },
     },
   ]),
@@ -39,21 +37,32 @@ export const topicSectionCardNcssTree: DeepPartial<TopicSectionNcssTree> = {
         textDecoration: 'none',
         boxShadow: '0 0 16px',
         color: 'cardShadow',
-        transition: 'transform .125s ease',
+        borderColor: 'white',
+        transition: 'transform .25s ease',
         ':hover': {
-          transform: 'translate3d(0, -4px, 0)',
+          transform: 'translate3d(0, -8px, 0)',
         },
-        ':nth-of-type(1)': {
-          background:
+        ':nth-of-type(3n+1)': {
+          backgroundImage:
             'linear-gradient(50deg, rgba(232,242,254,1) 0%, rgba(242,242,251,1) 100%)',
+          ':hover': {
+            backgroundImage:
+              'linear-gradient(50deg, rgba(232,242,254,1) 100%, rgba(242,242,251,1) 0%)',
+          },
         },
-        ':nth-of-type(2)': {
-          background:
+        ':nth-of-type(3n+2)': {
+          backgroundImage:
             'linear-gradient(50deg, rgba(242,242,251,1) 0%, rgba(249,240,246,1) 100%)',
+          ':hover': {
+            background: 'rgba(249,240,246,1) ',
+          },
         },
-        ':nth-of-type(3)': {
-          background:
+        ':nth-of-type(3n+3)': {
+          backgroundImage:
             'linear-gradient(50deg, rgba(249,240,246,1) 0%, rgba(252,236,242,1) 100%)',
+          ':hover': {
+            background: 'rgba(252,236,242,1)',
+          },
         },
       },
     },
@@ -84,7 +93,13 @@ export const topicSectionCardNcssTree: DeepPartial<TopicSectionNcssTree> = {
         mb: 0,
       },
     },
-    icon: iconTopicNcssNode,
+    icon: {
+      ncss: {
+        color: 'ghost',
+        strokeWidth: '.5px',
+        mb: 6,
+      },
+    },
     media: {
       ncss: {},
     },
@@ -102,7 +117,14 @@ export const topicSectionCardNcssTree: DeepPartial<TopicSectionNcssTree> = {
       },
     },
   },
-  wrapper: wrapperNcssNode,
+  wrapper: deepMerge([
+    wrapperNcssNode,
+    {
+      ncss: {
+        py: 8,
+      },
+    },
+  ]),
 }
 
 export const topicAsFullLinkNcssNode = {

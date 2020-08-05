@@ -112,8 +112,8 @@ export const topicNcssTree: TopicNcssTree = {
     icon: {
       ncss: {
         label: 'topic-icon',
-        w: '15px',
-        h: '15px',
+        w: '14px',
+        h: '14px',
         my: 'auto',
         transform: 'translateX(4px)',
       },

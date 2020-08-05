@@ -24,7 +24,6 @@ export const navigationSectionHeaderNcssTree: DeepPartial<NavigationSectionHeade
       left: '-100%',
       ':focus': {
         w: 1,
-        minHeight: '70px',
         py: 4,
         px: 3,
         left: 0,
@@ -44,11 +43,11 @@ export const navigationSectionHeaderNcssTree: DeepPartial<NavigationSectionHeade
   container: {
     ncss: {
       label: 'navigation-header-container',
-      bg: 'ghost',
-      color: 'white',
       height: '100%',
       justifyContent: 'space-between',
-      px: 3,
+      px: [0, 5],
+      borderBottom: '1px solid transparent',
+      borderColor: 'sectionBorder',
     },
   },
   header: {
@@ -67,8 +66,8 @@ export const navigationSectionHeaderNcssTree: DeepPartial<NavigationSectionHeade
           ncss: {
             label: 'brand-navigation-segment-brand',
             fontFamily: 'branding',
-            fontWeight: 7,
-            color: 'sectionText',
+            fontWeight: 3,
+            color: 'black',
           },
         },
         action: {
@@ -76,9 +75,9 @@ export const navigationSectionHeaderNcssTree: DeepPartial<NavigationSectionHeade
             label: 'brand-navigation-segment-action',
             display: 'inline-flex',
             fontFamily: 'branding',
-            fontWeight: 7,
+            fontWeight: 3,
             textDecoration: 'none',
-            color: 'sectionText',
+            color: 'black',
             ':focus': {
               outlineColor: 'outline',
             },
@@ -301,10 +300,10 @@ export const navigationSectionHeaderNcssTree: DeepPartial<NavigationSectionHeade
     wrapperNcssNode,
     {
       ncss: {
-        bg: 'sectionBgInverted',
+        bg: 'white',
         py: 0,
         width: 1,
-        height: '70px',
+        height: ['64px', '96px'],
       },
     },
   ]),

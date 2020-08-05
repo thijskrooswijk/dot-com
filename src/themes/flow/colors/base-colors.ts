@@ -6,7 +6,7 @@ export const baseColors = {
   azureShade: '#25257C',
   amber: '#FCA623',
   silver: '#EEE',
-  grey: '#CCC',
+  grey: '#DDD',
   metal: '#AAA',
   bullet: '#666',
   caviar: '#222',

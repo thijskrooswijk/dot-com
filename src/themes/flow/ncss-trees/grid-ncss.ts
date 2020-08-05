@@ -9,6 +9,6 @@ export const containerNcssNode: NcssNode = {
 export const wrapperNcssNode: NcssNode = {
   ncss: {
     label: 'wrapper',
-    py: 3,
+    p: 3,
   },
 }

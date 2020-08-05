@@ -1,5 +1,5 @@
 import { TopicSectionNcssTree } from '@wheelroom/wheel-topic'
-import { DeepPartial } from '@wheelroom/core'
+import { DeepPartial, deepMerge } from '@wheelroom/core'
 import {
   primaryButtonNcssNode,
   displayButtonNcssNode,
@@ -15,7 +15,6 @@ export const topicSectionHeadlineNcssTree: DeepPartial<TopicSectionNcssTree> = {
     content: {
       ncss: {
         p: 3,
-        py: 5,
       },
     },
     actionGroup: {
@@ -36,12 +35,23 @@ export const topicSectionHeadlineNcssTree: DeepPartial<TopicSectionNcssTree> = {
     },
     abstract: {
       ncss: {
-        maxWidth: [1, '35em'],
+        // maxWidth: [1, '35em'],
         fontSize: [7, 7, 8, 8],
       },
     },
     icon: iconTopicNcssNode,
     embed: embedNcssNode,
   },
-  wrapper: wrapperNcssNode,
+  wrapper: deepMerge([
+    wrapperNcssNode,
+    {
+      ncss: {
+        textAlign: 'center',
+        // bg: 'transparent',
+        // color: 'white',
+        // pt: [10, 11, 13],
+        // pb: 6,
+      },
+    },
+  ]),
 }

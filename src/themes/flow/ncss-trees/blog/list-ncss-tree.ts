@@ -6,30 +6,24 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
   container: {
     ncss: {
       label: 'blog-section-list-container',
-      alignItems: ['center', 'initial'],
-      flexDirection: ['column', 'row'],
-      flexWrap: 'wrap',
+      maxWidth: '1440px',
     },
   },
   blog: {
     ncss: {
       label: 'blog-section-list',
-      flexDirection: ['column', 'row'],
-      display: 'flex',
+      display: 'grid',
+      gridTemplateColumns: ['1fr', '1fr 1fr 1fr'],
+      gridGap: '16px',
       p: 0,
-      m: 0,
-      w: 1,
     },
     item: {
       ncss: {
         label: 'list-item',
         background: 'rgba(232,242,254,1)',
         listStyleType: 'none',
-        maxWidth: '35em',
-        my: 3,
-        w: [1, 1 / 2, 1 / 3],
-        mx: ['auto', 3],
         ':nth-of-type(1)': {
+          gridArea: ['1 / 1 / 1 / 1', 'auto / 1 / auto/ 3'],
           background:
             'linear-gradient(50deg, rgba(232,242,254,1) 0%, rgba(242,242,251,1) 100%)',
         },
@@ -46,8 +40,10 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
     link: {
       ncss: {
         label: 'list-link',
-        display: 'block',
         textDecoration: 'none',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
       },
     },
     media: {
@@ -63,6 +59,8 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
       },
       ncss: {
         label: 'list-img',
+        objectFit: 'cover',
+        h: 1,
       },
     },
     video: {
@@ -78,7 +76,7 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
     content: {
       ncss: {
         label: 'list-content',
-        flex: 1,
+        flex: '1 1 auto',
         flexDirection: 'column',
         p: 3,
       },
@@ -86,7 +84,7 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
     text: {
       ncss: {
         label: 'list-text',
-        flex: 1,
+        flex: '1 1 auto',
       },
     },
     heading: {
@@ -119,6 +117,7 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
         fontFamily: 'text',
         fontSize: 3,
         mt: 1,
+        flex: 0,
       },
     },
   },
