@@ -6,44 +6,37 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
   container: {
     ncss: {
       label: 'blog-section-list-container',
-      maxWidth: '1440px',
+      maxWidth: '1280px',
     },
   },
   blog: {
     ncss: {
       label: 'blog-section-list',
       display: 'grid',
-      gridTemplateColumns: ['1fr', '1fr 1fr 1fr'],
-      gridGap: '16px',
+      gridTemplateColumns: '1fr',
       p: 0,
+      w: 1,
+      ':hover > li': {
+        opacity: 0.5,
+      },
+      ':hover > li:hover': {
+        opacity: 1,
+      },
     },
     item: {
       ncss: {
         label: 'list-item',
-        background: 'rgba(232,242,254,1)',
         listStyleType: 'none',
-        ':nth-of-type(1)': {
-          gridArea: ['1 / 1 / 1 / 1', 'auto / 1 / auto/ 3'],
-          background:
-            'linear-gradient(50deg, rgba(232,242,254,1) 0%, rgba(242,242,251,1) 100%)',
-        },
-        ':nth-of-type(2)': {
-          background:
-            'linear-gradient(50deg, rgba(242,242,251,1) 0%, rgba(249,240,246,1) 100%)',
-        },
-        ':nth-of-type(3)': {
-          background:
-            'linear-gradient(50deg, rgba(249,240,246,1) 0%, rgba(252,236,242,1) 100%)',
-        },
+        transition: 'opacity .25s ease',
       },
     },
     link: {
       ncss: {
         label: 'list-link',
         textDecoration: 'none',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
+        display: 'block',
+        borderTop: '1px solid transparent',
+        borderColor: 'sectionBorder',
       },
     },
     media: {
@@ -76,22 +69,27 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
     content: {
       ncss: {
         label: 'list-content',
-        flex: '1 1 auto',
-        flexDirection: 'column',
-        p: 3,
+        display: 'grid',
+        gridTemplateColumns: ['1fr', '1fr 1fr 1fr'],
+        columnGap: ['8px', '32px'],
+        rowGap: '8px',
+        px: [0, 5],
+        py: 3,
       },
     },
     text: {
       ncss: {
         label: 'list-text',
-        flex: '1 1 auto',
+        gridArea: ['', '2 / 1 / auto / 3'],
       },
     },
     heading: {
       ncss: {
         label: 'list-heading',
         color: 'sectionTextInverted',
-        mt: 3,
+        fontSize: 7,
+        fontWeight: 3,
+        m: 0,
       },
     },
     abstract: {
@@ -105,8 +103,8 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
         label: 'list-categories',
         color: 'azure',
         fontFamily: 'text',
-        fontSize: 4,
-        order: -1,
+        fontSize: 3,
+        fontWeight: 7,
         textTransform: 'uppercase',
       },
     },
@@ -116,8 +114,8 @@ export const blogSectionListNcssTree: DeepPartial<BlogSectionListNcssTree> = {
         color: 'bullet',
         fontFamily: 'text',
         fontSize: 3,
-        mt: 1,
-        flex: 0,
+        gridArea: ['', 'auto / 3 / auto / 4'],
+        textAlign: ['left', 'right'],
       },
     },
   },
