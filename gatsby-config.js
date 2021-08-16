@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.thijskrooswijk.com`,
     title: `Thijs Krooswijk`,
-    description: `Full Stack developer. Coding with Python, Javascript (TypeScript) and HTML/CSS. Co-founder and contributing to Wheelroom. Working at Naivi on the NAP Framework.`,
+    description: `Open-source developer. Love coding with TypeScript and HTML/CSS. Co-founder and contributing to Wheelroom. Working at Healthtrain on a Healthcare App.`,
     author: `@thijskrooswijk`,
   },
   plugins: [
@@ -22,8 +22,6 @@ module.exports = {
         siteUrl: `https://www.thijskrooswijk.com`,
       },
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-svg-sprite`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -43,13 +41,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `thijs-krooswijk`,
-        short_name: `dotcom`,
+        short_name: `portfolio`,
         start_url: `/`,
         background_color: `#222222`,
         theme_color: `#222222`,

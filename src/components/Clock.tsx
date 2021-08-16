@@ -1,17 +1,18 @@
-import React from "react"
-import Box from "./box"
-import Image from "./image"
+import { Box } from './Box'
+import { Image } from './Image'
 
-const Clock = () => (
-  <Box m="auto" width={1}>
+export const Clock = () => (
+  <Box css={{ margin: 'auto', width: '100%' }}>
     <Box
-      width={1}
-      maxWidth="35em"
-      display="flex"
-      m="auto"
-      p={6}
-      flexDirection="row"
-      flexWrap="wrap"
+      css={{
+        width: '100%',
+        maxWidth: '35em',
+        display: 'flex',
+        margin: 'auto',
+        padding: 6,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+      }}
     >
       <Image image="right" rotation="right" />
       <Image image="left" rotation="left" />
@@ -35,5 +36,3 @@ const Clock = () => (
     </Box>
   </Box>
 )
-
-export default Clock

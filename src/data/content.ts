@@ -1,12 +1,12 @@
-export const heading = ["Latest work"]
-
-export const text = [
-  "I empowering companies and teams to implement and execute new technical solutions that support multi-channel services with speed and efficiency. With 12 years of experience, I’ve helped clients such as Elsevier, Schiphol, Novartis and NN, to iterate and grow over time in an agile process.",
-]
-
+export const text = "I empowering companies and teams to implement and execute new technical solutions that support multi-channel services with speed and efficiency. With 12 years of experience, I’ve helped clients such as Elsevier, Schiphol, Novartis and NN, to iterate and grow over time in an agile process."
 export const current = ["Currently working in Amsterdam"]
 
+export const heading = "Latest work"
 export const work = [
+  {
+    client: "HealthTrain",
+    description: "Design and Develop UI-library, incl. a Healthcare PWA",
+  },
   {
     client: "Wheelroom (open-source)",
     description: "A JAMstack boilerplate",
@@ -62,14 +62,17 @@ export const clients = [
 export const social = [
   {
     url: "https://www.linkedin.com/in/thijskrooswijk/",
-    icon: "linkedin",
+    icon: "/icons/linkedin.svg",
+    alt: 'linkedin',
   },
   {
     url: "https://www.github.com/thijskrooswijk/",
-    icon: "github",
+    icon: "/icons/github.svg",
+    alt: 'github',
   },
   {
     url: "https://www.npmjs.com/~thijskrooswijk",
-    icon: "npm",
+    icon: "/icons/npm.svg",
+    alt: 'npm',
   },
 ]

@@ -1,28 +1,16 @@
-import { createGlobalStyle } from "styled-components"
+import { css } from '@emotion/react'
 
-export default createGlobalStyle`
-  html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  html,
+export const globalStyle = css(`
   body {
-    padding: 0;
-    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: white;
+    background: #222;
   }
-  
+
   .gatsby-image-wrapper {
     display: flex;
     flex: 1 0 25%;
     width: 100%;
-  }
-  
-  ul {
-    line-height: 1.45;
   }
   
   .right {
@@ -207,4 +195,4 @@ export default createGlobalStyle`
               transform: scale(1.1) translate(0, 0);
     }
   }
-`
+`)

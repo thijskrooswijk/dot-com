@@ -1,58 +1,6 @@
-export const linkStyle = `
-    color: gray;
-`
-export const workListStyle = `
-  padding-left: 1.25em;
-  margin-bottom: 2em;
-`
+import { css } from '@emotion/react'
 
-export const workListItemStyle = `
-  margin-bottom: 2px;
-  span {
-    font-weight: bold;
-    color: white;
-  }
-`
-
-export const clientListStyle = `
-  list-style-type: none;
-  padding: 0;
-  line-height: 1.45;
-  color: silver;
-  margin-bottom: 2em;
-`
-
-export const clientListItemStyle = `
-  display: inline-flex;
-  &:after {
-    content: "\\00a0—\\00a0";
-    opacity: .5;
-  }
-  &:last-child:after {
-      content: "";
-  }
-`
-
-export const socialListStyle = `
-  list-style-type: none;
-  padding: 0;
-  line-height: 1.45;
-  color: silver;
-`
-
-export const socialListItemStyle = `
-  display: inline-flex;
-  margin-right: 12px;
-  &:last-child {
-    margin-right: 0;
-  }
-`
-
-export const socialLinkStyle = `
-    display: inline-flex;
-`
-
-export const dropletStyle = `
+export const dropletStyle = css(`
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -68,9 +16,9 @@ export const dropletStyle = `
   :nth-child(4) {animation-delay: -3s}
   :nth-child(5) {animation-delay: -4s}
   :nth-child(6) {animation-delay: -5s}
-`
+`)
 
-export const blobsStyle = `
+export const blobsStyle = css(`
   filter: url("#goo");
   position: absolute;
   top: 0;
@@ -78,9 +26,9 @@ export const blobsStyle = `
   bottom: 0;
   right: 0;
   height: 150%;
-`
+`)
 
-export const blobStyle = `
+export const blobStyle = css(`
   position: absolute;
     background: white;
     left: 50%;
@@ -105,4 +53,4 @@ export const blobStyle = `
   :nth-child(4) {
     -webkit-animation-name: blob-right-bottom-anim;
             animation-name: blob-right-bottom-anim;
-`
+`)
