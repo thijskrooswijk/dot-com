@@ -12,24 +12,40 @@ export const Image = ({ image, rotation }: ImageProps) => (
       query {
         right: file(relativePath: { eq: "angular-right.png" }) {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+              formats: WEBP
+            )
           }
         }
         left: file(relativePath: { eq: "angular-left.png" }) {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+              formats: WEBP
+            )
           }
         }
         rightNegative: file(
           relativePath: { eq: "angular-right-negative.png" }
         ) {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+              formats: WEBP
+            )
           }
         }
         leftNegative: file(relativePath: { eq: "angular-left-negative.png" }) {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+              formats: WEBP
+            )
           }
         }
       }
