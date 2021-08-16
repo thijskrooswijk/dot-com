@@ -68,3 +68,7 @@ yarn-error.log
 
 # JetBrains
 .idea/
+
+# Env
+.env
+.env.*
