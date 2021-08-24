@@ -1,21 +1,18 @@
 import { A, Img, Li, Ul } from '@wheelroom/any/react'
+import { contentModel } from '../data/content'
 import {
   socialLinkStyle,
   socialListItemStyle,
-  socialListStyle
+  socialListStyle,
 } from '../theme/style'
 
 interface SocialProps {
-  social: {
-    url: string
-    icon: string
-    alt: string
-  }[]
+  model: contentModel['social']
 }
 
-export const Social = (props: SocialProps) => {
-  const { social } = props
-  const listItems = social.map((social, index) => (
+export const Socials = ({ model }: SocialProps) => {
+  const socials = model
+  const socialList = socials.map((social, index) => (
     <Li key={index} css={socialListItemStyle}>
       <A href={social.url} css={socialLinkStyle}>
         <Img src={social.icon} width="24" height="24" alt={social.alt} />
@@ -23,5 +20,5 @@ export const Social = (props: SocialProps) => {
       {` `}
     </Li>
   ))
-  return <Ul css={socialListStyle}>{listItems}</Ul>
+  return <Ul css={socialListStyle}>{socialList}</Ul>
 }

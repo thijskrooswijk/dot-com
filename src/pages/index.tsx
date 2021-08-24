@@ -29,7 +29,7 @@ const IndexPage = (props: PageProps) => {
       />
       <Box css={indexPageStyle}>
         <Box css={sectionStyle} role="group">
-          <Content content={content} />
+          <Content model={content} />
           <Clock />
         </Box>
       </Box>

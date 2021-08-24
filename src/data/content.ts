@@ -2,17 +2,17 @@ export interface contentModel {
   clients: string[]
   current: string
   heading: string
+  projects: {
+    client: string
+    description: string
+    url?: string
+  }[]
   social: {
     url: string
     icon: string
     alt: string
   }[]
   text: string
-  work: {
-    client: string
-    description: string
-    url?: string
-  }[]
 }
 
 export const content: contentModel = {
@@ -37,25 +37,7 @@ export const content: contentModel = {
   ],
   current: 'Currently working in Amsterdam',
   heading: 'Latest work',
-  social: [
-    {
-      url: 'https://www.linkedin.com/in/thijskrooswijk/',
-      icon: '/icons/linkedin.svg',
-      alt: 'linkedin',
-    },
-    {
-      url: 'https://www.github.com/thijskrooswijk/',
-      icon: '/icons/github.svg',
-      alt: 'github',
-    },
-    {
-      url: 'https://www.npmjs.com/~thijskrooswijk',
-      icon: '/icons/npm.svg',
-      alt: 'npm',
-    },
-  ],
-  text: 'I empowering companies and teams to implement and execute new technical solutions that support multi-channel services with speed and efficiency. With 12 years of experience, I’ve helped clients such as Elsevier, Schiphol, Novartis and NN, to iterate and grow over time in an agile process.',
-  work: [
+  projects: [
     {
       client: 'HealthTrain',
       description: 'Design and Develop UI-library, incl. a Healthcare PWA',
@@ -91,4 +73,22 @@ export const content: contentModel = {
       url: 'https://www.nn.nl/',
     },
   ],
+  social: [
+    {
+      url: 'https://www.linkedin.com/in/thijskrooswijk/',
+      icon: '/icons/linkedin.svg',
+      alt: 'linkedin',
+    },
+    {
+      url: 'https://www.github.com/thijskrooswijk/',
+      icon: '/icons/github.svg',
+      alt: 'github',
+    },
+    {
+      url: 'https://www.npmjs.com/~thijskrooswijk',
+      icon: '/icons/npm.svg',
+      alt: 'npm',
+    },
+  ],
+  text: 'I empowering companies and teams to implement and execute new technical solutions that support multi-channel services with speed and efficiency. With 12 years of experience, I’ve helped clients such as Elsevier, Schiphol, Novartis and NN, to iterate and grow over time in an agile process.',
 }
