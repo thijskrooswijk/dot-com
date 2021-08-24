@@ -17,11 +17,6 @@ const contentStyle = mq({
   width: '100%',
 } as StyleObject)
 
-const groupStyle: StyleObject = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(25%, 1fr))',
-}
-
 export const Content = () => (
   <Box css={contentStyle}>
     <Header />
