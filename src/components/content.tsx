@@ -35,13 +35,13 @@ interface ContentProps {
 export const Content = ({ model }: ContentProps) => {
   return (
     <Box css={contentStyle}>
-      <Header />
+      <Header model={model.heading} />
       <Main>
-        <Text css={textStyle}>{model.text}</Text>
-        <Heading is="h3">{model.heading}</Heading>
+        <Text css={textStyle} children={model.text} />
+        <Heading is="h3" children={model.subHeading} />
         <Projects model={model.projects} />
         <Clients model={model.clients} />
-        <Text css={currentStyle}>{model.current}</Text>
+        <Text css={currentStyle} children={model.current} />
         <Socials model={model.social} />
       </Main>
     </Box>
