@@ -4,6 +4,7 @@ import { Clock } from '../components/clock'
 import { Content } from '../components/content'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
+import { content } from '../data/content'
 
 const IndexPage = (props: PageProps) => {
   return (
@@ -29,7 +30,7 @@ const IndexPage = (props: PageProps) => {
             minHeight: '100vh',
           }}
         >
-          <Content />
+          <Content content={content} />
           <Clock />
         </Box>
       </Box>
