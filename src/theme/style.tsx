@@ -4,7 +4,7 @@ export const linkStyle: StyleObject = {
   color: 'gray',
 }
 
-export const clientsListStyle: StyleObject = {
+export const clientListStyle: StyleObject = {
   color: 'silver',
   lineHeight: 1.45,
   listStyleType: 'none',
@@ -12,7 +12,7 @@ export const clientsListStyle: StyleObject = {
   padding: 0,
 }
 
-export const clientsListItemStyle: StyleObject = {
+export const clientListItemStyle: StyleObject = {
   display: 'inline-flex',
   ':after': {
     content: "'\\00a0—\\00a0'",
@@ -42,13 +42,13 @@ export const socialLinkStyle: StyleObject = {
   display: 'inline-flex',
 }
 
-export const workListStyle: StyleObject = {
+export const projectListStyle: StyleObject = {
   lineHeight: 1.45,
   marginBottom: '2em',
   paddingLeft: '1.25em',
 }
 
-export const workListItemStyle: StyleObject = {
+export const projectListItemStyle: StyleObject = {
   marginBottom: 2,
   span: {
     fontWeight: 'bold',
