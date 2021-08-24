@@ -1,10 +1,10 @@
 import { PageProps } from 'gatsby'
-import { Box } from '../components/Box'
-import { Heading } from '../components/Heading'
-import { Layout } from '../components/Layout'
-import { Link } from '../components/Link'
-import { Seo } from '../components/Seo'
-import { Text } from '../components/Text'
+import { Box } from '../components/box'
+import { Heading } from '../components/heading'
+import { Layout } from '../components/layout'
+import { Link } from '../components/link'
+import { Seo } from '../components/seo'
+import { Text } from '../components/text'
 
 const NotFoundPage = (props: PageProps) => (
   <Layout>
@@ -12,7 +12,7 @@ const NotFoundPage = (props: PageProps) => (
     <Box
       css={{
         margin: 'auto',
-        maxWidth: '1600px',
+        maxWidth: 1440,
         padding: 16,
         width: '100%',
       }}
