@@ -62,7 +62,13 @@ export const Image = ({ image, rotation }: ImageProps) => (
         fileName = data.left.childImageSharp.gatsbyImageData
       }
 
-      return <GatsbyImage image={fileName} className={rotation} alt="circle" />
+      return (
+        <GatsbyImage
+          image={fileName}
+          className={rotation}
+          alt={`Rotate ` + rotation}
+        />
+      )
     }}
   />
 )
