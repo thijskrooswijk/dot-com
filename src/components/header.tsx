@@ -1,10 +1,21 @@
-import { A } from '@wheelroom/any/react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { linkStyle } from '../theme/style'
+import { contentModel } from '../data/content'
+import { StyleObject } from '../lib/css-types'
 import { Heading } from './heading'
 import { Link } from './link'
 
-export const Header = () => {
+const headingStyle: StyleObject = {
+  color: 'silver',
+  fontWeight: 600,
+  lineHeight: 1.25,
+}
+
+interface HeaderProps {
+  model: contentModel['heading']
+}
+
+export const Header = ({ model }: HeaderProps) => {
+  const heading = model
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,20 +35,8 @@ export const Header = () => {
       <Heading>
         <Link to="/">{site.siteMetadata.title}</Link>
       </Heading>
-      <Heading
-        is="h2"
-        css={{
-          color: 'silver',
-          fontWeight: 600,
-          lineHeight: 1.25,
-        }}
-      >
-        Open-source developer. Love coding with TypeScript and HTML/CSS. Working
-        at Healthtrain and developing{' '}
-        <A css={linkStyle} href="https://github.com/wheelroom/wheelroom/">
-          Wheelroom
-        </A>{' '}
-        the fastest JAMstack boilerplate for applications.
+      <Heading is="h2" css={headingStyle}>
+        {heading}
       </Heading>
     </header>
   )
