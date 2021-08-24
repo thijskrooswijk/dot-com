@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `thijs-krooswijk`,
+        name: `Thijs Krooswijk`,
         short_name: `portfolio`,
         start_url: `/`,
         background_color: `#222222`,
