@@ -1,8 +1,8 @@
 import { A } from '@wheelroom/any/react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { linkStyle } from '../theme/style'
-import { Heading } from './Heading'
-import { Link } from './Link'
+import { Heading } from './heading'
+import { Link } from './link'
 
 export const Header = () => {
   const { site } = useStaticQuery(

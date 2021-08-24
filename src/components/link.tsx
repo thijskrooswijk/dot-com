@@ -1,5 +1,5 @@
-import { Link as GatsbyLink } from 'gatsby'
 import { css } from '@emotion/css'
+import { Link as GatsbyLink } from 'gatsby'
 
 const gatsbyLinkStyle = {
   color: 'gray',
