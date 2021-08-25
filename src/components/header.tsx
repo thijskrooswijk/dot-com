@@ -11,11 +11,11 @@ const headingStyle: StyleObject = {
 }
 
 interface HeaderProps {
-  model: contentModel['heading']
+  model: contentModel['header']
 }
 
 export const Header = ({ model }: HeaderProps) => {
-  const heading = model
+  const header = model
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -35,9 +35,7 @@ export const Header = ({ model }: HeaderProps) => {
       <Heading>
         <Link to="/">{site.siteMetadata.title}</Link>
       </Heading>
-      <Heading is="h2" css={headingStyle}>
-        {heading}
-      </Heading>
+      <Heading is="h2" css={headingStyle} children={header} />
     </header>
   )
 }
