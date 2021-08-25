@@ -39,15 +39,15 @@ export const content: contentModel = {
     'Podium Bloos',
     'De Ketelfactory',
   ],
-  current: 'Currently working in Amsterdam',
+  current: 'Currently living in Vancouver, BC',
   header: (
     <>
-      Open-source developer. Love coding with TypeScript and HTML/CSS. Working
-      at Healthtrain and developing{' '}
+      Open-source developer. Loves TypeScript and HTML/CSS. Working
+      at Healthtrain (NL) and developing{' '}
       <A css={linkStyle} href="https://github.com/wheelroom/wheelroom/">
         Wheelroom
       </A>{' '}
-      the fastest JAMstack boilerplate for applications.
+      the fastest JAMstack tooling for applications.
     </>
   ),
   projects: [
