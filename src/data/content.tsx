@@ -4,13 +4,13 @@ import { linkStyle } from '../theme/style'
 export interface contentModel {
   clients: string[]
   current: string
-  heading: React.ReactNode
+  header: React.ReactNode
   projects: {
     client: string
     description: string
     url?: string
   }[]
-  social: {
+  socials: {
     url: string
     icon: string
     alt: string
@@ -40,7 +40,7 @@ export const content: contentModel = {
     'De Ketelfactory',
   ],
   current: 'Currently working in Amsterdam',
-  heading: (
+  header: (
     <>
       Open-source developer. Love coding with TypeScript and HTML/CSS. Working
       at Healthtrain and developing{' '}
@@ -86,7 +86,7 @@ export const content: contentModel = {
       url: 'https://www.nn.nl/',
     },
   ],
-  social: [
+  socials: [
     {
       url: 'https://www.linkedin.com/in/thijskrooswijk/',
       icon: '/icons/linkedin.svg',
