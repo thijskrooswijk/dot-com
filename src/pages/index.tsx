@@ -1,6 +1,6 @@
 import { Section } from '@wheelroom/any/react'
 import { PageProps } from 'gatsby'
-import { Box } from '../components/box'
+import { Template } from '../components/template'
 import { Clock } from '../components/clock'
 import { Content } from '../components/content'
 import { Layout } from '../components/layout'
@@ -8,12 +8,6 @@ import { Seo } from '../components/seo'
 import { content } from '../data/content'
 import { StyleObject } from '../lib/css-types'
 import { mq } from '../theme/mq'
-
-const indexPageStyle: StyleObject = {
-  width: '100%',
-  margin: 'auto',
-  maxWidth: 1440,
-}
 
 const sectionStyle = mq({
   alignItems: 'center',
@@ -31,12 +25,12 @@ const IndexPage = (props: PageProps) => {
         title="Open-source Developer"
         keywords={[`Thijs Krooswijk`, `Developer`, `Resume`]}
       />
-      <Box css={indexPageStyle}>
+      <Template>
         <Section css={sectionStyle}>
           <Content model={content} />
           <Clock />
         </Section>
-      </Box>
+      </Template>
     </Layout>
   )
 }
