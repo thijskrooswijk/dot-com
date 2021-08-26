@@ -11,8 +11,6 @@ const clockStyle: StyleObject = {
   width: '100%',
 }
 
-const groupStyle: StyleObject = {}
-
 export const Clock = () => (
   <Box css={clockStyle}>
     <ClockOdd />

@@ -15,14 +15,8 @@ const contentStyle: StyleObject = {
   width: '100%',
 }
 
-const textStyle: StyleObject = {
-  fontSize: 18,
-  lineHeight: 1.45,
-  marginBottom: 16,
-}
-
 const currentStyle: StyleObject = {
-  marginBottom: '2em',
+  marginBottom: 36,
 }
 
 interface ContentProps {
@@ -34,7 +28,7 @@ export const Content = ({ model }: ContentProps) => {
     <Box css={contentStyle}>
       <Header model={model.header} />
       <Main>
-        <Text css={textStyle} children={model.text} />
+        <Text children={model.text} />
         <Heading is="h3" children={model.subHeading} />
         <Projects model={model.projects} />
         <Clients model={model.clients} />
