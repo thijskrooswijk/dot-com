@@ -1,7 +1,6 @@
 import { Main } from '@wheelroom/any/react'
 import { contentModel } from '../data/content'
 import { StyleObject } from '../lib/css-types'
-import { mq } from '../theme/mq'
 import { Box } from './box'
 import { Clients } from './clients'
 import { Header } from './header'
@@ -10,13 +9,11 @@ import { Projects } from './projects'
 import { Socials } from './socials'
 import { Text } from './text'
 
-const contentStyle = mq({
-  gridColumn: ['1 / 3', '1 / 2'],
+const contentStyle: StyleObject = {
   maxWidth: 720,
-  margin: 'auto',
   padding: 24,
   width: '100%',
-} as StyleObject)
+}
 
 const textStyle: StyleObject = {
   fontSize: 18,
