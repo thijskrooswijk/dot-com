@@ -1,9 +1,5 @@
 import { StyleObject } from '../lib/css-types'
 
-export const linkStyle: StyleObject = {
-  color: 'white',
-}
-
 export const clientListStyle: StyleObject = {
   color: 'silver',
   listStyleType: 'none',
@@ -23,9 +19,9 @@ export const clientListItemStyle: StyleObject = {
 }
 
 export const socialListStyle: StyleObject = {
+  color: 'silver',
   listStyleType: 'none',
   padding: '0',
-  color: 'silver',
 }
 
 export const socialListItemStyle: StyleObject = {
@@ -50,6 +46,5 @@ export const projectListItemStyle: StyleObject = {
   marginBottom: 2,
   span: {
     fontWeight: 'bold',
-    color: 'cyan',
   },
 }

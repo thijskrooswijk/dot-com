@@ -1,42 +1,26 @@
-import { A, Li, Span, Ul } from '@wheelroom/any/react'
+import { Li, Span, Ul } from '@wheelroom/any/react'
 import { Fragment } from 'react'
 import { contentModel } from '../data/content'
-import {
-  linkStyle,
-  projectListItemStyle,
-  projectListStyle
-} from '../theme/style'
+import { projectListItemStyle, projectListStyle } from '../theme/style'
+import { Link } from './link'
 
 interface ProjectsProps {
   model: contentModel['projects']
 }
 
-const Abstract = ({ model }) => {
-  return (
-    <>
-      <Span>{model.client}</Span>
-      {` `}
-      {model.description}
-    </>
-  )
+const ConditionalRendering = ({ model, ...rest }) => {
+  return model.url ? <Link to={model.url} {...rest} /> : <Fragment {...rest} />
 }
 
-const ConditionalRendering = ({ model, ...props }) => {
-  return model.url ? (
-    <A href={model.url} css={linkStyle}>
-      {props.children}
-    </A>
-  ) : (
-    <Fragment {...props} />
-  )
-}
 export const Projects = ({ model }: ProjectsProps) => {
   const projects = model
   const projectList = projects.map((project, index) => {
     return (
       <Li key={index} css={projectListItemStyle}>
-        <ConditionalRendering model={project}>
-          <Abstract model={project} />
+        <ConditionalRendering model={project} title={project.client}>
+          <Span>{project.client}</Span>
+          {` `}
+          {project.description}
         </ConditionalRendering>
       </Li>
     )

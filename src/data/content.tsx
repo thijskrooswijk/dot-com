@@ -1,5 +1,4 @@
-import { A } from '@wheelroom/any/react'
-import { linkStyle } from '../theme/style'
+import { Link } from '../components/link'
 
 export interface contentModel {
   clients: string[]
@@ -11,9 +10,9 @@ export interface contentModel {
     url?: string
   }[]
   socials: {
-    url: string
-    icon: string
     alt: string
+    icon: string
+    url: string
   }[]
   subHeading: string
   text: string
@@ -44,9 +43,9 @@ export const content: contentModel = {
     <>
       Open-source developer. Loves TypeScript and HTML/CSS. Working
       at Healthtrain (NL) and developing{' '}
-      <A css={linkStyle} href="https://github.com/wheelroom/wheelroom/">
+      <Link to="https://github.com/wheelroom/wheelroom/">
         Wheelroom
-      </A>{' '}
+      </Link>{' '}
       the fastest JAMstack tooling for applications.
     </>
   ),
@@ -88,19 +87,19 @@ export const content: contentModel = {
   ],
   socials: [
     {
-      url: 'https://www.linkedin.com/in/thijskrooswijk/',
-      icon: '/icons/linkedin.svg',
       alt: 'linkedin',
+      icon: '/icons/linkedin.svg',
+      url: 'https://www.linkedin.com/in/thijskrooswijk/',
     },
     {
-      url: 'https://www.github.com/thijskrooswijk/',
-      icon: '/icons/github.svg',
       alt: 'github',
+      icon: '/icons/github.svg',
+      url: 'https://www.github.com/thijskrooswijk/',
     },
     {
-      url: 'https://www.npmjs.com/~thijskrooswijk',
-      icon: '/icons/npm.svg',
       alt: 'npm',
+      icon: '/icons/npm.svg',
+      url: 'https://www.npmjs.com/~thijskrooswijk',
     },
   ],
   subHeading: 'Latest work',
