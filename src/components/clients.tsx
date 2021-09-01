@@ -1,5 +1,5 @@
 import { Li, Ul } from '@wheelroom/any/react'
-import { ContentModel } from '../data/content'
+import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
 
 export const clientListStyle: StyleObject = {
