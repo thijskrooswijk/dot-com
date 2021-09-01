@@ -1,5 +1,5 @@
 import { A, Img, Li, Ul } from '@wheelroom/any/react'
-import { contentModel } from '../data/content'
+import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
 
 export const socialListStyle: StyleObject = {
@@ -17,8 +17,8 @@ export const socialListItemStyle: StyleObject = {
   width: 24,
 }
 
-interface SocialProps {
-  model: contentModel['socials']
+type SocialProps = {
+  model: ContentModel['socials']
 }
 
 export const Socials = ({ model }: SocialProps) => {

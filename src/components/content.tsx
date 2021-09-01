@@ -1,11 +1,11 @@
 import { Main } from '@wheelroom/any/react'
-import { contentModel } from '../data/content'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
 import { Box } from './box'
 import { Clients } from './clients'
 import { Header } from './header'
-import { Heading } from './heading'
-import { Projects } from './projects'
+import { options } from './rich-text'
 import { Socials } from './socials'
 import { Text } from './text'
 
@@ -15,24 +15,22 @@ const contentStyle: StyleObject = {
   width: '100%',
 }
 
-const currentStyle: StyleObject = {
+const footnoteStyle: StyleObject = {
   marginBottom: 36,
 }
 
 interface ContentProps {
-  model: contentModel
+  model: ContentModel
 }
 
 export const Content = ({ model }: ContentProps) => {
   return (
     <Box css={contentStyle}>
-      <Header model={model.header} />
+      <Header model={model.heading} />
       <Main>
-        <Text children={model.text} />
-        <Heading is="h3" children={model.subHeading} />
-        <Projects model={model.projects} />
+        {model.abstract && renderRichText(model.abstract, options)}
         <Clients model={model.clients} />
-        <Text css={currentStyle} children={model.current} />
+        <Text css={footnoteStyle}>{model.footnote}</Text>
         <Socials model={model.socials} />
       </Main>
     </Box>

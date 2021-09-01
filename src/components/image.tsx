@@ -15,7 +15,6 @@ export const Image = ({ image, rotation }: ImageProps) => (
             gatsbyImageData(
               placeholder: TRACED_SVG
               layout: CONSTRAINED
-              formats: WEBP
             )
           }
         }
@@ -24,7 +23,6 @@ export const Image = ({ image, rotation }: ImageProps) => (
             gatsbyImageData(
               placeholder: TRACED_SVG
               layout: CONSTRAINED
-              formats: WEBP
             )
           }
         }
@@ -35,7 +33,6 @@ export const Image = ({ image, rotation }: ImageProps) => (
             gatsbyImageData(
               placeholder: TRACED_SVG
               layout: CONSTRAINED
-              formats: WEBP
             )
           }
         }
@@ -44,7 +41,6 @@ export const Image = ({ image, rotation }: ImageProps) => (
             gatsbyImageData(
               placeholder: TRACED_SVG
               layout: CONSTRAINED
-              formats: WEBP
             )
           }
         }

@@ -1,41 +1,18 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import { contentModel } from '../data/content'
-import { StyleObject } from '../lib/css-types'
+import { ContentModel } from '../data/content'
 import { Heading } from './heading'
 import { Link } from './link'
 
-const headingStyle: StyleObject = {
-  color: 'silver',
-  fontWeight: 600,
-  lineHeight: 1.25,
-}
-
 interface HeaderProps {
-  model: contentModel['header']
+  model: ContentModel['heading']
 }
 
 export const Header = ({ model }: HeaderProps) => {
-  const header = model
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
+  const heading = model
   return (
     <header>
       <Heading>
-        <Link to="/">{site.siteMetadata.title}</Link>
+        <Link to="/">{heading}</Link>
       </Heading>
-      <Heading is="h2" css={headingStyle} children={header} />
     </header>
   )
 }

@@ -1,5 +1,5 @@
 import { Li, Ul } from '@wheelroom/any/react'
-import { contentModel } from '../data/content'
+import { ContentModel } from '../data/content'
 import { StyleObject } from '../lib/css-types'
 
 export const clientListStyle: StyleObject = {
@@ -21,14 +21,14 @@ export const clientListItemStyle: StyleObject = {
 }
 
 interface ClientsProps {
-  model: contentModel['clients']
+  model: ContentModel['clients']
 }
 
 export const Clients = ({ model }: ClientsProps) => {
   const clients = model
-  const clientList = clients.map((client, index) => (
+  const clientList = clients.map((company, index) => (
     <Li key={index} css={clientListItemStyle}>
-      {client}
+      {company}
     </Li>
   ))
   return <Ul css={clientListStyle}>{clientList}</Ul>

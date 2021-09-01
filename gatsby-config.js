@@ -1,7 +1,5 @@
 let activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
-console.log(`Using environment config: '${activeEnv}'`)
-
 require("dotenv").config({
   path: `.env.${activeEnv}`,
 })
@@ -14,6 +12,13 @@ module.exports = {
     author: `@thijskrooswijk`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
@@ -25,13 +30,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
       },
     },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: process.env.GOOGLE_TAGMANAGER_ID,
+        id: process.env.GATSBY_GOOGLE_TAGMANAGER_ID,
       },
     },
     {

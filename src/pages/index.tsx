@@ -1,11 +1,12 @@
 import { Section } from '@wheelroom/any/react'
-import { PageProps } from 'gatsby'
-import { Template } from '../components/template'
+import { graphql, PageProps, useStaticQuery } from 'gatsby'
 import { Clock } from '../components/clock'
 import { Content } from '../components/content'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
-import { content } from '../data/content'
+import { Template } from '../components/template'
+import { socials } from '../data/content'
+import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
 import { mq } from '../theme/mq'
 
@@ -18,7 +19,24 @@ const sectionStyle = mq({
   minHeight: '100vh',
 } as StyleObject)
 
-const IndexPage = (props: PageProps) => {
+type IndexQueryProps = ContentModel
+type IndexPageProps = PageProps<IndexQueryProps>
+
+const IndexPage = (props: IndexPageProps) => {
+  let { data } = props
+  const contentfulData = useStaticQuery(graphql`
+    query {
+      contentfulIndex {
+        abstract {
+          raw
+        }
+        clients
+        footnote
+        heading
+      }
+    }
+  `)
+  data = { ...contentfulData.contentfulIndex, socials }
   return (
     <Layout>
       <Seo
@@ -27,7 +45,7 @@ const IndexPage = (props: PageProps) => {
       />
       <Template>
         <Section css={sectionStyle}>
-          <Content model={content} />
+          <Content model={data} />
           <Clock />
         </Section>
       </Template>
