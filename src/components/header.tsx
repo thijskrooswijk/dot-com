@@ -1,4 +1,4 @@
-import { ContentModel } from '../data/content'
+import { ContentModel } from '../data/models'
 import { Heading } from './heading'
 import { Link } from './link'
 
