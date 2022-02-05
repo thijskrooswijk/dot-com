@@ -28,15 +28,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: process.env.GATSBY_GOOGLE_TAGMANAGER_ID,
+        trackingIds: [ process.env.GATSBY_GOOGLE_GTAG_ID ]
       },
     },
     {
