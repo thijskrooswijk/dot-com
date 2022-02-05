@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.thijskrooswijk.com`,
     title: `Thijs Krooswijk`,
-    description: `Open-source developer. Love coding with TypeScript and HTML/CSS. Co-founder and contributing to Wheelroom. Working at Healthtrain on a Healthcare App.`,
+    description: `Freelance and Open-source developer. Love coding with React, TypeScript and HTML/CSS. Contributing to Knappsack. Working at Monné on a Healthcare App.`,
     author: `@thijskrooswijk`,
   },
   plugins: [

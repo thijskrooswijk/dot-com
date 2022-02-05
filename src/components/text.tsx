@@ -2,6 +2,7 @@ import { StyleObject } from '../lib/css-types'
 import { GetTypesOf } from '../lib/get-types-of'
 
 const textStyle: StyleObject = {
+  color: 'white',
   fontSize: 18,
   lineHeight: 1.45,
 }

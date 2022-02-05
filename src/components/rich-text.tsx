@@ -13,6 +13,7 @@ const headingStyle: StyleObject = {
 }
 
 const listStyle: StyleObject = {
+  color: 'white',
   lineHeight: 1.675,
   marginBottom: '2em',
   paddingLeft: '1.25em',
