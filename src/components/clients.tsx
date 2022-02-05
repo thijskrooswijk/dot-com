@@ -1,6 +1,6 @@
-import { Li, Ul } from '@wheelroom/any/react'
 import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
+import { Li, Ul } from './elements'
 
 export const clientListStyle: StyleObject = {
   color: 'silver',

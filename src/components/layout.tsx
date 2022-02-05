@@ -1,8 +1,8 @@
-import { Global } from '@emotion/react'
-import { globalReset } from '@wheelroom/any/react'
 import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+import { Global } from '@emotion/react'
 import { globalStyle } from '../theme/global'
+import { globalReset } from '../theme/global-reset'
 
 export const Layout = ({ children }) => (
   <StaticQuery

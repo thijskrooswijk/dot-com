@@ -1,5 +1,5 @@
-import { Section } from '@wheelroom/any/react'
 import { PageProps } from 'gatsby'
+import { Section } from '../components/elements'
 import { Heading } from '../components/heading'
 import { Layout } from '../components/layout'
 import { Link } from '../components/link'

@@ -1,4 +1,3 @@
-import { Main } from '@wheelroom/any/react'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
@@ -27,12 +26,12 @@ export const Content = ({ model }: ContentProps) => {
   return (
     <Box css={contentStyle}>
       <Header model={model.heading} />
-      <Main>
+      <main>
         {model.abstract && renderRichText(model.abstract, options)}
         <Clients model={model.clients} />
         <Text css={footnoteStyle}>{model.footnote}</Text>
         <Socials model={model.socials} />
-      </Main>
+      </main>
     </Box>
   )
 }

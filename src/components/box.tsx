@@ -1,3 +1,3 @@
-import { AnyProps, Div } from '@wheelroom/any/react'
+import { GetTypesOf } from '../lib/get-types-of'
 
-export const Box = (props: AnyProps['div']) => <Div {...props} />
+export const Box = (props: GetTypesOf['div']) => <div {...props} />

@@ -14,7 +14,8 @@ const createRgba = () => {
   )
 }
 
-export const globalStyle = css(`
+export const globalStyle = css(
+  `
   body {
     background: #000;
     background: radial-gradient(68.13% 100% at 100% 0,` +
@@ -45,4 +46,5 @@ export const globalStyle = css(`
   @keyframes rotate-left {
     100% { transform: rotate(-360deg); }
   }
-`)
+`
+)

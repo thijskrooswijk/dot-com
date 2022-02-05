@@ -1,7 +1,7 @@
-import { Section } from '@wheelroom/any/react'
 import { graphql, PageProps, useStaticQuery } from 'gatsby'
 import { Clock } from '../components/clock'
 import { Content } from '../components/content'
+import { Section } from '../components/elements'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
 import { Template } from '../components/template'

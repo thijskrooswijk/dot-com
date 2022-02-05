@@ -1,20 +1,7 @@
 import { Options } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, Inline, INLINES, MARKS } from '@contentful/rich-text-types'
-import {
-  Code,
-  Div,
-  I,
-  Li,
-  Ol,
-  Strong,
-  Table,
-  Tbody,
-  Td,
-  Tr,
-  U,
-  Ul,
-} from '@wheelroom/any/react'
 import { StyleObject } from '../lib/css-types'
+import { Li, Ol, Ul } from './elements'
 import { Heading } from './heading'
 import { Link } from './link'
 import { Text } from './text'
@@ -40,10 +27,10 @@ const listItemStyle: StyleObject = {
 
 export const options: Options = {
   renderMark: {
-    [MARKS.BOLD]: (text) => <Strong>{text}</Strong>,
-    [MARKS.ITALIC]: (text) => <I>{text}</I>,
-    [MARKS.UNDERLINE]: (text) => <U>{text}</U>,
-    [MARKS.CODE]: (text) => <Code>{text}</Code>,
+    [MARKS.BOLD]: (text) => <strong>{text}</strong>,
+    [MARKS.ITALIC]: (text) => <i>{text}</i>,
+    [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+    [MARKS.CODE]: (text) => <code>{text}</code>,
   },
   renderNode: {
     [BLOCKS.DOCUMENT]: (__node, children) => children,
@@ -68,21 +55,25 @@ export const options: Options = {
     [BLOCKS.HEADING_6]: (__node, children) => (
       <Heading is="h6">{children}</Heading>
     ),
-    [BLOCKS.EMBEDDED_ENTRY]: (__node, children) => <Div>{children}</Div>,
+    [BLOCKS.EMBEDDED_ENTRY]: (__node, children) => <div>{children}</div>,
     [BLOCKS.UL_LIST]: (__node, children) => <Ul css={listStyle}>{children}</Ul>,
-    [BLOCKS.OL_LIST]: (__node, children) => <Ol css={listStyle}>{children}</Ol>,
+    [BLOCKS.OL_LIST]: (__node, children) => (
+      <Ol is="ol" css={listStyle}>
+        {children}
+      </Ol>
+    ),
     [BLOCKS.LIST_ITEM]: (__node, children) => (
       <Li css={listItemStyle}>{children}</Li>
     ),
     [BLOCKS.QUOTE]: (__node, children) => <blockquote>{children}</blockquote>,
     [BLOCKS.HR]: () => <hr />,
     [BLOCKS.TABLE]: (__node, children) => (
-      <Table>
-        <Tbody>{children}</Tbody>
-      </Table>
+      <table>
+        <tbody>{children}</tbody>
+      </table>
     ),
-    [BLOCKS.TABLE_ROW]: (__node, children) => <Tr>{children}</Tr>,
-    [BLOCKS.TABLE_CELL]: (__node, children) => <Td>{children}</Td>,
+    [BLOCKS.TABLE_ROW]: (__node, children) => <tr>{children}</tr>,
+    [BLOCKS.TABLE_CELL]: (__node, children) => <td>{children}</td>,
     [INLINES.ASSET_HYPERLINK]: (node) =>
       defaultInline(INLINES.ASSET_HYPERLINK, node as Inline),
     [INLINES.ENTRY_HYPERLINK]: (node) =>

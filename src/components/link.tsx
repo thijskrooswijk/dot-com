@@ -1,7 +1,7 @@
 import { css } from '@emotion/css'
-import { A } from '@wheelroom/any/react'
-import { Link as GatsbyLink } from "gatsby"
+import { Link as GatsbyLink } from 'gatsby'
 import { StyleObject } from '../lib/css-types'
+import { A } from './elements'
 
 const linkStyle: StyleObject = {
   color: '#00E2B1',

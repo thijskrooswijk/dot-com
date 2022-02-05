@@ -1,6 +1,6 @@
-import { A, Img, Li, Ul } from '@wheelroom/any/react'
 import { ContentModel } from '../data/models'
 import { StyleObject } from '../lib/css-types'
+import { A, Img, Li, Ul } from './elements'
 
 export const socialListStyle: StyleObject = {
   color: 'silver',
