@@ -16,3 +16,5 @@ export const Ul = (props: GetTypesOf['ul']) => <AnyElement is="ul" {...props} />
 export const Li = (props: GetTypesOf['li']) => <AnyElement is="li" {...props} />
 
 export const A = (props: GetTypesOf['a']) => <AnyElement is="a" {...props} />
+
+export const B = (props: GetTypesOf['b']) => <AnyElement is="b" {...props} />

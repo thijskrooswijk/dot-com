@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import { isBrowser } from '../lib/is-browser'
+import 'inter-ui/inter.css'
 
 const generateColorCode = () => Math.round(Math.random() * 255)
 
@@ -31,12 +32,20 @@ const renderGradiant = () => {
 
 export const globalStyle = css(
   `
+  :root { font-family: 'Inter', 'system-ui', sans-serif; }
+
+  @supports (font-variation-settings: normal) {
+    :root { font-family: 'Inter var', 'system-ui', sans-serif; }
+  }
+
   body {
     background: #000;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 18px;
+    letter-spacing: -.011em;
     line-height: 1.45;
-    `+ renderGradiant() +`
+    ` +
+    renderGradiant() +
+    `
   }
   
   .right {

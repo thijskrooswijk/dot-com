@@ -1,7 +1,7 @@
 import { Options } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, Inline, INLINES, MARKS } from '@contentful/rich-text-types'
 import { StyleObject } from '../lib/css-types'
-import { Li, Ol, Ul } from './elements'
+import { B, Li, Ol, Ul } from './elements'
 import { Heading } from './heading'
 import { Link } from './link'
 import { Text } from './text'
@@ -26,9 +26,13 @@ const listItemStyle: StyleObject = {
   },
 }
 
+const boldStyle: StyleObject = {
+  fontWeight: 600,
+}
+
 export const options: Options = {
   renderMark: {
-    [MARKS.BOLD]: (text) => <strong>{text}</strong>,
+    [MARKS.BOLD]: (text) => <B css={boldStyle}>{text}</B>,
     [MARKS.ITALIC]: (text) => <i>{text}</i>,
     [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
     [MARKS.CODE]: (text) => <code>{text}</code>,
