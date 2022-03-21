@@ -9,6 +9,7 @@ import { Socials } from './socials'
 import { Text } from './text'
 
 const contentStyle: StyleObject = {
+  boxSizing: 'border-box',
   maxWidth: 720,
   padding: 24,
   width: '100%',

@@ -4,6 +4,7 @@ import { ClockEven } from './clock-even'
 import { ClockOdd } from './clock-odd'
 
 const clockStyle: StyleObject = {
+  boxSizing: 'border-box',
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(25%, 1fr))',
   maxWidth: 720,
