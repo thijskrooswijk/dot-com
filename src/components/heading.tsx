@@ -5,6 +5,7 @@ import { AnyElement } from '../lib/react-create-any-element'
 const headingStyle: StyleObject = {
   color: 'white',
   fontWeight: 600,
+  fontFeatureSettings: `'kern' 1, 'ss03' 1`,
 }
 
 export const Heading = (props: GetTypesOf['h1']) => (

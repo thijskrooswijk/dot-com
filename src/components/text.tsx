@@ -5,6 +5,7 @@ const textStyle: StyleObject = {
   color: 'white',
   lineHeight: 1.45,
   fontWeight: 300,
+  fontFeatureSettings: `'kern' 1, 'ss03' 1`,
 }
 
 export const Text = (props: GetTypesOf['p']) => <p css={textStyle} {...props} />
