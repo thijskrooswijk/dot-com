@@ -52,7 +52,7 @@ module.exports = {
         background_color: `#222222`,
         theme_color: `#222222`,
         display: `minimal-ui`,
-        icon: `src/images/angular-right.png`, // This path is relative to the root of the site.
+        icon: `src/images/angular.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
