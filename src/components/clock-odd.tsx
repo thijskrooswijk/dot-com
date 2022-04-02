@@ -2,9 +2,9 @@ import { Image } from './image'
 
 export const ClockOdd = () => (
   <>
-    <Image image="right" rotation="right" />
-    <Image image="left" rotation="left" />
-    <Image image="right" rotation="right" />
-    <Image image="left" rotation="left" />
+    <Image image="angularRotate" reverse />
+    <Image image="angular" />
+    <Image image="angularRotate" reverse />
+    <Image image="angular" />
   </>
 )
