@@ -3,7 +3,6 @@ import { StyleObject } from '../lib/css-types'
 import { A, Img, Li, Ul } from './elements'
 
 export const socialListStyle: StyleObject = {
-  color: 'silver',
   display: 'grid',
   gap: 12,
   gridAutoFlow: 'column',

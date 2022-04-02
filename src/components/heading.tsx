@@ -3,7 +3,7 @@ import { GetTypesOf } from '../lib/get-types-of'
 import { AnyElement } from '../lib/react-create-any-element'
 
 const headingStyle: StyleObject = {
-  color: 'white',
+  color: `var(--text-color)`,
   fontWeight: 600,
   fontFeatureSettings: `'kern' 1, 'ss03' 1`,
 }

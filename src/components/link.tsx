@@ -4,9 +4,9 @@ import { StyleObject } from '../lib/css-types'
 import { A } from './elements'
 
 const linkStyle: StyleObject = {
-  color: '#00E2B1',
+  color: `var(--link-color)`,
   ':hover, :active, :focus, :visited': {
-    color: '#00E2B1',
+    color: `var(--link-color)`,
   },
 }
 

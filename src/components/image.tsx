@@ -1,33 +1,57 @@
+import { CSSInterpolation } from '@emotion/css'
+import { ClassNames, keyframes } from '@emotion/react'
 import { graphql, StaticQuery } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { StyleObject } from '../lib/css-types'
+
+const rotateRight = keyframes`
+  100% { transform: rotate(360deg);
+`
+
+const rotateLeft = keyframes`
+  100% { transform: rotate(-360deg);
+`
+
+const rightStyle: StyleObject = {
+  animation: `${rotateRight} linear 8s infinite`,
+}
+
+const leftStyle: StyleObject = {
+  animation: `${rotateLeft} linear 8s infinite`,
+}
 
 interface ImageProps {
   image: string
-  rotation: string
+  reverse?: boolean
+  style?: CSSInterpolation
 }
 
-export const Image = ({ image, rotation }: ImageProps) => (
+export const Image = ({
+  style,
+  image = 'angular',
+  reverse = false,
+}: ImageProps) => (
   <StaticQuery
     query={graphql`
       query {
-        right: file(relativePath: { eq: "angular-right.png" }) {
+        angular: file(relativePath: { eq: "angular.png" }) {
           childImageSharp {
             gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
           }
         }
-        left: file(relativePath: { eq: "angular-left.png" }) {
+        angularRotate: file(relativePath: { eq: "angular-rotate.png" }) {
           childImageSharp {
             gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
           }
         }
-        rightNegative: file(
-          relativePath: { eq: "angular-right-negative.png" }
+        flipAngularRotate: file(
+          relativePath: { eq: "flip-angular-rotate.png" }
         ) {
           childImageSharp {
             gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
           }
         }
-        leftNegative: file(relativePath: { eq: "angular-left-negative.png" }) {
+        flipAngular: file(relativePath: { eq: "flip-angular.png" }) {
           childImageSharp {
             gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
           }
@@ -35,23 +59,29 @@ export const Image = ({ image, rotation }: ImageProps) => (
       }
     `}
     render={(data) => {
-      let fileName: any
-      if (image === 'right') {
-        fileName = data.right.childImageSharp.gatsbyImageData
-      } else if (image === 'rightNegative') {
-        fileName = data.rightNegative.childImageSharp.gatsbyImageData
-      } else if (image === 'leftNegative') {
-        fileName = data.leftNegative.childImageSharp.gatsbyImageData
-      } else {
-        fileName = data.left.childImageSharp.gatsbyImageData
+      let fileName: IGatsbyImageData =
+        data.angular.childImageSharp.gatsbyImageData
+
+      if (image === 'angularRotate') {
+        fileName = data.angularRotate.childImageSharp.gatsbyImageData
+      }
+      if (image === 'flipAngularRotate') {
+        fileName = data.flipAngularRotate.childImageSharp.gatsbyImageData
+      }
+      if (image === 'flipAngular') {
+        fileName = data.flipAngular.childImageSharp.gatsbyImageData
       }
 
       return (
-        <GatsbyImage
-          image={fileName}
-          className={rotation}
-          alt={`Rotate ` + rotation}
-        />
+        <ClassNames>
+          {({ css, cx }) => (
+            <GatsbyImage
+              image={fileName}
+              className={css([reverse ? rightStyle : leftStyle, style])}
+              alt={`Rotate ` + reverse}
+            />
+          )}
+        </ClassNames>
       )
     }}
   />

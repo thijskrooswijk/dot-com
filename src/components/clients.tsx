@@ -3,7 +3,6 @@ import { StyleObject } from '../lib/css-types'
 import { Li, Ul } from './elements'
 
 export const clientListStyle: StyleObject = {
-  color: 'silver',
   listStyleType: 'none',
   marginBottom: '2em',
   padding: 0,
@@ -11,6 +10,8 @@ export const clientListStyle: StyleObject = {
 
 export const clientListItemStyle: StyleObject = {
   display: 'inline-flex',
+  color: `var(--list-color)`,
+  fontWeight: 300,
   ':after': {
     content: "'\\00a0—\\00a0'",
     opacity: 0.5,
