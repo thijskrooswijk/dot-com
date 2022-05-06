@@ -1,36 +1,43 @@
-import { ContentModel } from '../data/models'
-import { StyleObject } from '../lib/css-types'
-import { Li, Ul } from './elements'
+import * as React from "react"
 
-export const clientListStyle: StyleObject = {
-  listStyleType: 'none',
-  marginBottom: '2em',
+import { ClientsModel } from "../data/models"
+import { StyleObject } from "../lib/css-types"
+import { Li, Ul } from "./elements"
+
+export const clientsStyle: StyleObject = {
+  listStyleType: "none",
+  marginBottom: "2em",
   padding: 0,
 }
 
-export const clientListItemStyle: StyleObject = {
-  display: 'inline-flex',
+export const companyStyle: StyleObject = {
+  display: "inline-flex",
   color: `var(--list-color)`,
   fontWeight: 300,
-  ':after': {
+  ":after": {
     content: "'\\00a0—\\00a0'",
     opacity: 0.5,
   },
-  ':last-child:after': {
+  ":last-child:after": {
     content: "''",
   },
 }
 
 interface ClientsProps {
-  model: ContentModel['clients']
+  model: ClientsModel[]
 }
 
-export const Clients = ({ model }: ClientsProps) => {
-  const clients = model
-  const clientList = clients.map((company, index) => (
-    <Li key={index} css={clientListItemStyle}>
-      {company}
-    </Li>
-  ))
-  return <Ul css={clientListStyle}>{clientList}</Ul>
-}
+export const Clients = ({ model }: ClientsProps) => (
+  <Ul css={clientsStyle}>{getClient(model)}</Ul>
+)
+
+const getClient = (model: ClientsModel[]) =>
+  model.map(company => {
+    const uuid = React.useId()
+
+    return (
+      <Li key={uuid} css={companyStyle}>
+        <>{company}</>
+      </Li>
+    )
+  })
