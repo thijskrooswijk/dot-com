@@ -1,17 +1,16 @@
-import { ContentModel } from '../data/models'
-import { Heading } from './heading'
-import { Link } from './link'
+import * as React from "react"
 
-interface HeaderProps {
-  model: ContentModel['heading']
-}
+import { Heading } from "./heading"
+import { Link } from "./link"
 
-export const Header = ({ model }: HeaderProps) => {
-  const heading = model
+export const Header: React.FC<JSX.IntrinsicElements["header"]> = ({
+  children,
+  ...props
+}) => {
   return (
-    <header>
+    <header role="banner" {...props}>
       <Heading>
-        <Link to="/">{heading}</Link>
+        <Link to="/">{children}</Link>
       </Heading>
     </header>
   )
