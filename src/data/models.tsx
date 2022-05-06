@@ -1,19 +1,21 @@
 import {
   ContentfulRichTextGatsbyReference,
   RenderRichTextData,
-} from 'gatsby-source-contentful/rich-text'
+} from "gatsby-source-contentful/rich-text"
 
-export interface ContentModel {
+export type ContentModel = {
   heading: string
-  clients: {
-    company: string
-  }[]
+  clients: ClientsModel[]
   abstract: RenderRichTextData<ContentfulRichTextGatsbyReference>
   footnote: string
-  socials: SocialsModel[]
+  platforms: PlatformsModel[]
 }
 
-export interface SocialsModel {
+export type ClientsModel = {
+  company: string
+}
+
+export type PlatformsModel = {
   alt: string
   icon: string
   url: string
