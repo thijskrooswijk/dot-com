@@ -7,7 +7,7 @@ const htmlReset = {
    * 2. Prevent adjustments of font size after orientation changes in iOS.
    */
   lineHeight: 1.15 /* 1 */,
-  WebkitTextSizeAdjust: '100%' /* 2 */,
+  WebkitTextSizeAdjust: "100%" /* 2 */,
 }
 
 /* Sections
@@ -24,11 +24,11 @@ const hiddenReset = {
   /**
    * Add the correct display in IE 10.
    */
-  display: 'none',
+  display: "none",
 }
 
 export const globalReset = {
   html: htmlReset,
   body: bodyReset,
-  '[hidden]': hiddenReset,
+  "[hidden]": hiddenReset,
 }

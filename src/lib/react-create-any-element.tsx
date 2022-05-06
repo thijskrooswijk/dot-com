@@ -1,17 +1,18 @@
-import { Interpolation } from '@emotion/react'
-import React from 'react'
+import { CSSInterpolation } from "@emotion/css"
+import React from "react"
 
 type AnyElementProps = {
-  is: keyof JSX.IntrinsicElements
+  children?: React.ReactNode
   className?: string
-  css?: Interpolation<any>
+  css?: CSSInterpolation
+  is: keyof JSX.IntrinsicElements
 }
 
 export const AnyElement: React.FC<AnyElementProps> = ({
   children,
   ...props
 }) => {
-  const type = props.is || 'div'
+  const type = props.is || "div"
   const attributes = Object.assign({}, props)
   delete attributes.is
   /**

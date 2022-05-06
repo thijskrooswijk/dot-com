@@ -1,6 +1,6 @@
-import { css } from '@emotion/react'
-import { renderGradiant } from '../lib/render-gradient'
-import 'inter-ui/inter.css'
+import { css } from "@emotion/react"
+import { renderGradiant } from "../lib/render-gradient"
+import "inter-ui/inter.css"
 
 export const globalStyle = css(`
   :root { 
