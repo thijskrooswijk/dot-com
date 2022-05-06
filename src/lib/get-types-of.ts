@@ -1,4 +1,4 @@
-import { Interpolation } from '@emotion/react'
+import { Interpolation } from "@emotion/react"
 
 type ReactJSXIntrinsicElements = JSX.IntrinsicElements
 export type JSXIntrinsicElements = keyof ReactJSXIntrinsicElements

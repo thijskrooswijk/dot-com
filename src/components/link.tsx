@@ -1,11 +1,11 @@
-import { css } from '@emotion/css'
-import { Link as GatsbyLink } from 'gatsby'
-import { StyleObject } from '../lib/css-types'
-import { A } from './elements'
+import { css } from "@emotion/css"
+import { Link as GatsbyLink } from "gatsby"
+import { StyleObject } from "../lib/css-types"
+import { A } from "./elements"
 
 const linkStyle: StyleObject = {
   color: `var(--link-color)`,
-  ':hover, :active, :focus, :visited': {
+  ":hover, :active, :focus, :visited": {
     color: `var(--link-color)`,
   },
 }

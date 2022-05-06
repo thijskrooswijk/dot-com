@@ -1,22 +1,22 @@
-import { Options } from '@contentful/rich-text-react-renderer'
-import { BLOCKS, Inline, INLINES, MARKS } from '@contentful/rich-text-types'
-import { StyleObject } from '../lib/css-types'
-import { B, Li, Ol, Ul } from './elements'
-import { Heading } from './heading'
-import { Link } from './link'
-import { Text } from './text'
+import { Options } from "@contentful/rich-text-react-renderer"
+import { BLOCKS, Inline, INLINES, MARKS } from "@contentful/rich-text-types"
+import { StyleObject } from "../lib/css-types"
+import { B, Li, Ol, Ul } from "./elements"
+import { Heading } from "./heading"
+import { Link } from "./link"
+import { Text } from "./text"
 
 const headingStyle: StyleObject = {
-  color: 'silver',
+  color: "silver",
   fontWeight: 600,
   lineHeight: 1.25,
 }
 
 const listStyle: StyleObject = {
-  color: 'white',
+  color: "white",
   lineHeight: 1.675,
-  marginBottom: '2em',
-  paddingLeft: '1.25em',
+  marginBottom: "2em",
+  paddingLeft: "1.25em",
 }
 
 const listItemStyle: StyleObject = {
@@ -32,10 +32,10 @@ const boldStyle: StyleObject = {
 
 export const options: Options = {
   renderMark: {
-    [MARKS.BOLD]: (text) => <B css={boldStyle}>{text}</B>,
-    [MARKS.ITALIC]: (text) => <i>{text}</i>,
-    [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
-    [MARKS.CODE]: (text) => <code>{text}</code>,
+    [MARKS.BOLD]: text => <B css={boldStyle}>{text}</B>,
+    [MARKS.ITALIC]: text => <i>{text}</i>,
+    [MARKS.UNDERLINE]: text => <u>{text}</u>,
+    [MARKS.CODE]: text => <code>{text}</code>,
   },
   renderNode: {
     [BLOCKS.DOCUMENT]: (__node, children) => children,
@@ -79,11 +79,11 @@ export const options: Options = {
     ),
     [BLOCKS.TABLE_ROW]: (__node, children) => <tr>{children}</tr>,
     [BLOCKS.TABLE_CELL]: (__node, children) => <td>{children}</td>,
-    [INLINES.ASSET_HYPERLINK]: (node) =>
+    [INLINES.ASSET_HYPERLINK]: node =>
       defaultInline(INLINES.ASSET_HYPERLINK, node as Inline),
-    [INLINES.ENTRY_HYPERLINK]: (node) =>
+    [INLINES.ENTRY_HYPERLINK]: node =>
       defaultInline(INLINES.ENTRY_HYPERLINK, node as Inline),
-    [INLINES.EMBEDDED_ENTRY]: (node) =>
+    [INLINES.EMBEDDED_ENTRY]: node =>
       defaultInline(INLINES.EMBEDDED_ENTRY, node as Inline),
     [INLINES.HYPERLINK]: (node, children) => (
       <Link to={node.data.uri}>{children}</Link>

@@ -1,12 +1,14 @@
-import { StyleObject } from '../lib/css-types'
-import { GetTypesOf } from '../lib/get-types-of'
+import { StyleObject } from "../lib/css-types"
+import { GetTypesOf } from "../lib/get-types-of"
 
 const templateStyle: StyleObject = {
-  width: '100%',
-  margin: 'auto',
+  width: "100%",
+  margin: "auto",
   maxWidth: 1440,
 }
 
-export const Template = (props: GetTypesOf['div']) => (
-  <div css={templateStyle} {...props} />
+export const Template = ({ children, ...props }: GetTypesOf["div"]) => (
+  <div css={templateStyle} {...props}>
+    {children}
+  </div>
 )

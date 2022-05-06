@@ -1,8 +1,8 @@
-import { CSSInterpolation } from '@emotion/css'
-import { ClassNames, keyframes } from '@emotion/react'
-import { graphql, StaticQuery } from 'gatsby'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import { StyleObject } from '../lib/css-types'
+import { CSSInterpolation } from "@emotion/css"
+import { ClassNames, keyframes } from "@emotion/react"
+import { graphql, StaticQuery } from "gatsby"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { StyleObject } from "../lib/css-types"
 
 const rotateRight = keyframes`
   100% { transform: rotate(360deg);
@@ -28,7 +28,7 @@ interface ImageProps {
 
 export const Image = ({
   style,
-  image = 'angular',
+  image = "angular",
   reverse = false,
 }: ImageProps) => (
   <StaticQuery
@@ -58,17 +58,17 @@ export const Image = ({
         }
       }
     `}
-    render={(data) => {
+    render={data => {
       let fileName: IGatsbyImageData =
         data.angular.childImageSharp.gatsbyImageData
 
-      if (image === 'angularRotate') {
+      if (image === "angularRotate") {
         fileName = data.angularRotate.childImageSharp.gatsbyImageData
       }
-      if (image === 'flipAngularRotate') {
+      if (image === "flipAngularRotate") {
         fileName = data.flipAngularRotate.childImageSharp.gatsbyImageData
       }
-      if (image === 'flipAngular') {
+      if (image === "flipAngular") {
         fileName = data.flipAngular.childImageSharp.gatsbyImageData
       }
 
