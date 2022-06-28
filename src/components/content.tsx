@@ -1,3 +1,4 @@
+import * as React from "react"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { ContentModel } from "../data/models"
 import { StyleObject } from "../lib/css-types"
@@ -23,7 +24,7 @@ interface ContentProps {
   model: ContentModel
 }
 
-export const Content = ({ model }: ContentProps) => {
+export const Content: React.FC<ContentProps> = ({ model }) => {
   const { heading, abstract, clients, footnote, platforms } = model
 
   return (

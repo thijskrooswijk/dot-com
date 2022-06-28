@@ -1,20 +1,45 @@
+import * as React from "react"
 import { GetTypesOf } from "../lib/get-types-of"
-import { AnyElement } from "../lib/react-create-any-element"
+import { Any } from "../lib/react-create-any-element"
 
-export const Section = (props: GetTypesOf["section"]) => (
-  <AnyElement is="section" css={{ padding: 4 }} {...props} />
+export const Section: React.FC<GetTypesOf["section"]> = props => (
+  <Any is="section" css={{ padding: 4 }} {...props}>
+    {props.children}
+  </Any>
 )
 
-export const Img = (props: GetTypesOf["img"]) => (
-  <AnyElement is="img" {...props} />
+export const Img: React.FC<GetTypesOf["img"]> = props => (
+  <Any is="img" {...props}>
+    {props.children}
+  </Any>
 )
 
-export const Ol = (props: GetTypesOf["ol"]) => <AnyElement is="ol" {...props} />
+export const Ol: React.FC<GetTypesOf["ol"]> = props => (
+  <Any is="ol" {...props}>
+    {props.children}
+  </Any>
+)
 
-export const Ul = (props: GetTypesOf["ul"]) => <AnyElement is="ul" {...props} />
+export const Ul: React.FC<GetTypesOf["ul"]> = props => (
+  <Any is="ul" {...props}>
+    {props.children}
+  </Any>
+)
 
-export const Li = (props: GetTypesOf["li"]) => <AnyElement is="li" {...props} />
+export const Li: React.FC<GetTypesOf["li"]> = props => (
+  <Any is="li" {...props}>
+    {props.children}
+  </Any>
+)
 
-export const A = (props: GetTypesOf["a"]) => <AnyElement is="a" {...props} />
+export const A: React.FC<GetTypesOf["a"]> = props => (
+  <Any is="a" {...props}>
+    {props.children}
+  </Any>
+)
 
-export const B = (props: GetTypesOf["b"]) => <AnyElement is="b" {...props} />
+export const B: React.FC<GetTypesOf["b"]> = props => (
+  <Any is="b" {...props}>
+    {props.children}
+  </Any>
+)

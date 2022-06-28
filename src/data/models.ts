@@ -11,9 +11,7 @@ export type ContentModel = {
   platforms: PlatformsModel[]
 }
 
-export type ClientsModel = {
-  company: string
-}
+export type ClientsModel = string
 
 export type PlatformsModel = {
   alt: string

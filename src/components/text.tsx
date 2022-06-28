@@ -8,7 +8,7 @@ const textStyle: StyleObject = {
   fontFeatureSettings: `'kern' 1, 'ss03' 1`,
 }
 
-export const Text = ({ children, ...props }: GetTypesOf["p"]) => (
+export const Text: React.FC<GetTypesOf["p"]> = ({ children, ...props }) => (
   <p css={textStyle} {...props}>
     {children}
   </p>

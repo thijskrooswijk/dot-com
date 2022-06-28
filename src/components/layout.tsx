@@ -1,24 +1,12 @@
-import { graphql, StaticQuery } from "gatsby"
+import * as React from "react"
 import { Global } from "@emotion/react"
 import { globalStyle } from "../theme/global"
 import { globalReset } from "../theme/global-reset"
+import { GetTypesOf } from '../lib/get-types-of'
 
-export const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Global styles={[globalReset, globalStyle]} />
-        {children}
-      </>
-    )}
-  />
+export const Layout: React.FC<GetTypesOf['div']> = props => (
+  <React.Fragment>
+    <Global styles={[globalReset, globalStyle]} />
+    {props.children}
+  </React.Fragment>
 )

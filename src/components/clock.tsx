@@ -1,3 +1,4 @@
+import * as React from "react"
 import { StyleObject } from "../lib/css-types"
 import { Box } from "./box"
 import { ClockEven } from "./clock-even"
@@ -12,7 +13,7 @@ const clockStyle: StyleObject = {
   width: "100%",
 }
 
-const Clock = () => (
+const Clock: React.FC = () => (
   <Box css={clockStyle}>
     <ClockOdd />
     <ClockEven />

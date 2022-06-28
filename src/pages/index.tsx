@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { graphql, PageProps, useStaticQuery } from "gatsby"
 import { Content } from "../components/content"
 import { Section } from "../components/elements"
@@ -25,7 +24,7 @@ const sectionStyle = mq({
 type IndexQueryProps = ContentModel
 type IndexPageProps = PageProps<IndexQueryProps>
 
-const IndexPage = (props: IndexPageProps) => {
+const IndexPage: React.FC<IndexPageProps> = props => {
   const contentfulData = useStaticQuery(graphql`
     query {
       contentfulIndex {
@@ -49,7 +48,7 @@ const IndexPage = (props: IndexPageProps) => {
       <Template>
         <Section css={sectionStyle}>
           <Content model={content} />
-          <React.Suspense fallback={<></>}>
+          <React.Suspense fallback={<React.Fragment></React.Fragment>}>
             <Clock />
           </React.Suspense>
         </Section>

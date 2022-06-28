@@ -1,3 +1,4 @@
+import * as React from "react"
 import { CSSInterpolation } from "@emotion/css"
 import { ClassNames, keyframes } from "@emotion/react"
 import { graphql, StaticQuery } from "gatsby"
@@ -26,11 +27,11 @@ interface ImageProps {
   style?: CSSInterpolation
 }
 
-export const Image = ({
+export const Image: React.FC<ImageProps> = ({
   style,
   image = "angular",
   reverse = false,
-}: ImageProps) => (
+}) => (
   <StaticQuery
     query={graphql`
       query {

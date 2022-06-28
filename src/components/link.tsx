@@ -1,3 +1,4 @@
+import * as React from "react"
 import { css } from "@emotion/css"
 import { Link as GatsbyLink } from "gatsby"
 import { StyleObject } from "../lib/css-types"
@@ -16,7 +17,7 @@ interface LinkProps {
   to: string
 }
 
-export const Link = ({ children, to, ...props }: LinkProps) => {
+export const Link: React.FC<LinkProps> = ({ children, to, ...props }) => {
   const internal = /^\/(?!\/)/.test(to)
   if (internal) {
     return (

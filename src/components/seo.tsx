@@ -1,12 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 export const Seo = ({
   description = "",
   lang = "en",
   meta = [],
-  keywords = [],
-  title,
+  keywords = [""],
+  title = "",
 }) => {
   const { site } = useStaticQuery(
     graphql`

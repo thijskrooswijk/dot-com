@@ -13,7 +13,7 @@ const sectionStyle: StyleObject = {
   padding: 24,
 }
 
-const NotFoundPage = (props: PageProps) => (
+const NotFoundPage: React.FC<PageProps> = props => (
   <Layout>
     <Seo
       title="404 Not found"

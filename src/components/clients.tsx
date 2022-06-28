@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { ClientsModel } from "../data/models"
 import { StyleObject } from "../lib/css-types"
 import { Li, Ul } from "./elements"
@@ -27,17 +26,16 @@ interface ClientsProps {
   model: ClientsModel[]
 }
 
-export const Clients = ({ model }: ClientsProps) => (
-  <Ul css={clientsStyle}>{getClient(model)}</Ul>
+export const Clients: React.FC<ClientsProps> = ({ model }) => (
+  <Ul css={clientsStyle}>
+    {model?.map((company) => {
+      const uuid = React.useId()
+
+      return (
+        <Li key={uuid} css={companyStyle}>
+          {company}
+        </Li>
+      )
+    })}
+  </Ul>
 )
-
-const getClient = (model: ClientsModel[]) =>
-  model.map(company => {
-    const uuid = React.useId()
-
-    return (
-      <Li key={uuid} css={companyStyle}>
-        <>{company}</>
-      </Li>
-    )
-  })
