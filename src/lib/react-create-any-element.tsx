@@ -1,26 +1,22 @@
-import { CSSInterpolation } from "@emotion/css"
-import React from "react"
+import * as React from "react"
 
-type AnyElementProps = {
-  children?: React.ReactNode
-  className?: string
-  css?: CSSInterpolation
-  is: keyof JSX.IntrinsicElements
-}
+type AnyProps = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
+>
 
-export const AnyElement: React.FC<AnyElementProps> = ({
-  children,
-  ...props
-}) => {
+export const Any = (props: AnyProps) => {
   const type = props.is || "div"
   const attributes = Object.assign({}, props)
   delete attributes.is
-  /**
-   * Emotion CSS-in-JS helper
-   * ------------------------
-   * Copy className to new element. This allows for creating
-   * components that inherit styling from the base component.
-   */
-  attributes.className = props.className
-  return React.createElement(type, attributes, children)
+  return React.createElement(type, attributes, props.children)
 }
+
+export const AnyForwardRef = React.forwardRef(
+  (props: AnyProps, ref: React.ForwardedRef<unknown>) => {
+    const type = props.is || "div"
+    const attributes = Object.assign({}, props)
+    delete attributes.is
+    return React.createElement(type, { ...attributes, ref }, props.children)
+  }
+)
