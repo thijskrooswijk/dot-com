@@ -7,7 +7,10 @@ const templateStyle: StyleObject = {
   maxWidth: 1440,
 }
 
-export const Template: React.FC<GetTypesOf["div"]> = ({ children, ...props }) => (
+export const Template: React.FC<GetTypesOf["div"]> = ({
+  children,
+  ...props
+}) => (
   <div css={templateStyle} {...props}>
     {children}
   </div>

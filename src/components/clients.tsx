@@ -28,7 +28,7 @@ interface ClientsProps {
 
 export const Clients: React.FC<ClientsProps> = ({ model }) => (
   <Ul css={clientsStyle}>
-    {model?.map((company) => {
+    {model?.map(company => {
       const uuid = React.useId()
 
       return (
