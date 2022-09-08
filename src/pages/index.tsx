@@ -41,10 +41,6 @@ const IndexPage: React.FC<IndexPageProps> = props => {
 
   return (
     <Layout>
-      <Seo
-        title="Open-source Developer"
-        keywords={[`Thijs Krooswijk`, `Developer`, `Resume`]}
-      />
       <Template>
         <Section css={sectionStyle}>
           <Content model={content} />
@@ -58,3 +54,12 @@ const IndexPage: React.FC<IndexPageProps> = props => {
 }
 
 export default IndexPage
+
+export const Head = () => {
+  return (
+    <Seo
+      title="Software Engineer"
+      keywords={[`Thijs Krooswijk`, `Developer`, `Resume`]}
+    />
+  )
+}

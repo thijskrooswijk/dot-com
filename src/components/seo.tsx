@@ -1,79 +1,69 @@
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Helmet } from "react-helmet"
 
 export const Seo = ({
+  author = "",
   description = "",
-  lang = "en",
-  meta = [],
   keywords = [""],
   title = "",
+  slug = "",
 }) => {
+  const uuid = React.useId()
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
+            siteTitle
             description
             author
+            keywords
+            siteUrl
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const seo = {
+    author: author ?? site.siteMetadata.author,
+    description: description ?? site.siteMetadata.description,
+    keywords: keywords ?? site.siteMetadata.keywords,
+    title: `${title}${site.siteMetadata.siteTitle && ` | ${site.siteMetadata.siteTitle}`}`,
+    url: slug
+      ? `${site.siteMetadata.siteUrl}${slug}`
+      : site.siteMetadata.siteUrl,
+  }
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
-    />
+    <React.Fragment>
+      <title key={uuid}>{seo.title}</title>
+      <link key={uuid} rel="canonical" href={seo.url} />
+
+      {/* Primary Meta Tags */}
+      <meta key={uuid} name="title" content={seo.title} />
+      <meta key={uuid} name="description" content={seo.description} />
+      {/* <meta key={uuid} name="image" content={seo.image} /> */}
+      <meta
+        key={uuid}
+        name="keywords"
+        content={seo.keywords ? seo.keywords.join(", ") : undefined}
+      />
+
+      {/* Open Graph / Facebook  */}
+      <meta key={uuid} property="og:type" content="website" />
+      <meta key={uuid} property="og:url" content={seo.url} />
+      <meta key={uuid} property="og:title" content={seo.title} />
+      <meta key={uuid} property="og:description" content={seo.description} />
+      {/* <meta key={uuid} property="og:image" content={seo.image} /> */}
+
+      {/* Twitter */}
+      <meta key={uuid} name="twitter:card" content="summary_large_image" />
+      <meta key={uuid} name="twitter:creator" content={seo.author} />
+      <meta key={uuid} name="twitter:url" content={seo.url} />
+      <meta key={uuid} name="twitter:title" content={seo.title} />
+      <meta key={uuid} name="twitter:description" content={seo.description} />
+      {/* <meta key={uuid} name="twitter:image" content={seo.image} /> */}
+    </React.Fragment>
   )
 }

@@ -10,9 +10,10 @@ dotenv.config({
 const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://www.thijskrooswijk.com`,
-    title: `Thijs Krooswijk`,
-    description: `Freelance and Open-source developer. Love coding with React, TypeScript and HTML/CSS. Contributing to Knappsack. Working at Monné on a Healthcare App.`,
+    siteTitle: `Thijs Krooswijk`,
+    description: `Software Engineer. Love coding with React, TypeScript and HTML/CSS. Contributing to Knappsack. Working at Monné on a Healthcare App.`,
     author: `@thijskrooswijk`,
+    keywords: ['developer'],
   },
   plugins: [
     {
@@ -22,7 +23,6 @@ const config: GatsbyConfig = {
         accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,

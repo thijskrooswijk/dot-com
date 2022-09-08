@@ -15,10 +15,6 @@ const sectionStyle: StyleObject = {
 
 const NotFoundPage: React.FC<PageProps> = props => (
   <Layout>
-    <Seo
-      title="404 Not found"
-      keywords={[`Thijs Krooswijk`, `Developer`, `404`]}
-    />
     <Template>
       <Section css={sectionStyle}>
         <Heading>Not found</Heading>
@@ -30,3 +26,12 @@ const NotFoundPage: React.FC<PageProps> = props => (
 )
 
 export default NotFoundPage
+
+export const Head = () => {
+  return (
+    <Seo
+      title="404 Not found"
+      keywords={[`Thijs Krooswijk`, `Developer`, `404`]}
+    />
+  )
+}
