@@ -1,10 +1,13 @@
-let activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
-require("dotenv").config({
-  path: `.env.${activeEnv}`,
+
+import type { GatsbyConfig } from "gatsby"
+import * as dotenv from "dotenv"
+
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://www.thijskrooswijk.com`,
     title: `Thijs Krooswijk`,
@@ -52,11 +55,11 @@ module.exports = {
         background_color: `#222222`,
         theme_color: `#222222`,
         display: `minimal-ui`,
-        icon: `src/images/angular.png`, // This path is relative to the root of the site.
+        icon: `src/images/angular.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ],
 }
+
+export default config
