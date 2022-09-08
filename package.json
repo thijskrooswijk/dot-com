@@ -21,7 +21,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{ts,tsx,js,jsx}",
+    "format": "prettier --write src/**/*.{ts,tsx}",
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

@@ -29,7 +29,9 @@ export const Seo = ({
     author: author ?? site.siteMetadata.author,
     description: description ?? site.siteMetadata.description,
     keywords: keywords ?? site.siteMetadata.keywords,
-    title: `${title}${site.siteMetadata.siteTitle && ` | ${site.siteMetadata.siteTitle}`}`,
+    title: `${title}${
+      site.siteMetadata.siteTitle && ` | ${site.siteMetadata.siteTitle}`
+    }`,
     url: slug
       ? `${site.siteMetadata.siteUrl}${slug}`
       : site.siteMetadata.siteUrl,
