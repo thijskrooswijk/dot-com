@@ -37,24 +37,24 @@ export const Image: React.FC<ImageProps> = ({
       query {
         angular: file(relativePath: { eq: "angular.png" }) {
           childImageSharp {
-            gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+            gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
           }
         }
         angularRotate: file(relativePath: { eq: "angular-rotate.png" }) {
           childImageSharp {
-            gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+            gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
           }
         }
         flipAngularRotate: file(
           relativePath: { eq: "flip-angular-rotate.png" }
         ) {
           childImageSharp {
-            gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+            gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
           }
         }
         flipAngular: file(relativePath: { eq: "flip-angular.png" }) {
           childImageSharp {
-            gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+            gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
           }
         }
       }
