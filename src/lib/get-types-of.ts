@@ -1,4 +1,5 @@
 import { Interpolation } from "@emotion/react"
+import { StyleObject } from './css-types'
 
 type ReactJSXIntrinsicElements = JSX.IntrinsicElements
 export type JSXIntrinsicElements = keyof ReactJSXIntrinsicElements
@@ -14,6 +15,6 @@ export type GetTypesOf = {
      * @see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is
      */
     is?: JSXIntrinsicElements
-    css?: Interpolation<K>
+    css?: StyleObject
   }
 }

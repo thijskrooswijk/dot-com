@@ -19,7 +19,7 @@ const sectionStyle = mq({
   gridTemplateColumns: ["repeat(1, 1fr)", "repeat(2, 1fr)"],
   justifyItems: "center",
   minHeight: "100vh",
-} as StyleObject)
+})
 
 type IndexQueryProps = ContentModel
 type IndexPageProps = PageProps<IndexQueryProps>
