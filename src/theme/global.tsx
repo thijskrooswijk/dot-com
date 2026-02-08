@@ -14,6 +14,10 @@ export const globalStyle = css(`
     :root { font-family: 'Inter var', 'system-ui', sans-serif; }
   }
 
+  html {
+    background-color: #000;
+  }
+
   body {
     font-size: 18px;
     letter-spacing: -.011em;
